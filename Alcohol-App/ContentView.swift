@@ -12,59 +12,52 @@ struct ContentView: View {
         ZStack{
             LinearGradient(gradient: Gradient(colors: [.brown, .white]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
-            HStack{
-                Image(systemName: "globe.asia.australia")
-                    .renderingMode(.original)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .offset(y: -225)
-                    .frame(width: 125, height: 125)
-                    .padding()
+            VStack{
                 HStack{
-                    Image(systemName: "person.3")
+                    Image(systemName: "globe.asia.australia")
                         .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .offset(y: -225)
-                        .frame(width: 125, height: 1250)
-                        .padding()
+                        .frame(width: 125, height: 125)
+                        .padding(30)
+                    HStack{
+                        Image(systemName: "person.3")
+                            .renderingMode(.original)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 125, height: 125)
+                            .padding(30)
+                    }
                 }
-            }
-            HStack{
-                Image(systemName: "hand.thumbsup")
-                    .renderingMode(.original)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .offset(y: 50)
-                    .frame(width: 125, height: 125)
-                    .padding()
-            }
-            HStack{
-                Image(systemName: "house")
-                    .renderingMode(.original)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .offset(y: 350)
-                    .frame(width: 75, height: 75)
-                    .padding()
                 HStack{
+                    Image(systemName: "bolt.horizontal.circle")
+                        .renderingMode(.original)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 200, height: 200)
+                        .padding(100)
+                }
+                HStack{
+                    Image(systemName: "house")
+                        .renderingMode(.original)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 75, height: 75)
+                        .padding(15)
                     Image(systemName: "magnifyingglass")
                         .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .offset(y: 350)
                         .frame(width: 75, height: 75)
-                        .padding()
-                    HStack{
-                        Image(systemName: "person")
-                            .renderingMode(.original)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .offset(y: 350)
-                            .frame(width: 75, height: 75)
-                            .padding()
-                    }
+                        .padding(15)
+                    Image(systemName: "person")
+                        .renderingMode(.original)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 75, height: 75)
+                        .padding(15)
                 }
+                Spacer()
             }
         }
     }
