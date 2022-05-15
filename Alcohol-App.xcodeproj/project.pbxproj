@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9C98FE12831766900EA80BB /* Alcohol_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C98FE02831766900EA80BB /* Alcohol_AppApp.swift */; };
+		F9C98FE32831766900EA80BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C98FE22831766900EA80BB /* ContentView.swift */; };
+		F9C98FE52831766B00EA80BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9C98FE42831766B00EA80BB /* Assets.xcassets */; };
+		F9C98FE82831766B00EA80BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9C98FE72831766B00EA80BB /* Preview Assets.xcassets */; };
+		F9C98FF22831766B00EA80BB /* Alcohol_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C98FF12831766B00EA80BB /* Alcohol_AppTests.swift */; };
+		F9C98FFC2831766B00EA80BB /* Alcohol_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C98FFB2831766B00EA80BB /* Alcohol_AppUITests.swift */; };
+		F9C98FFE2831766B00EA80BB /* Alcohol_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C98FFD2831766B00EA80BB /* Alcohol_AppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9C98FEE2831766B00EA80BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9C98FD52831766900EA80BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9C98FDC2831766900EA80BB;
+			remoteInfo = "Alcohol-App";
+		};
+		F9C98FF82831766B00EA80BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9C98FD52831766900EA80BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9C98FDC2831766900EA80BB;
+			remoteInfo = "Alcohol-App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F9C98FDD2831766900EA80BB /* Alcohol-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alcohol-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9C98FE02831766900EA80BB /* Alcohol_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alcohol_AppApp.swift; sourceTree = "<group>"; };
+		F9C98FE22831766900EA80BB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F9C98FE42831766B00EA80BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9C98FE72831766B00EA80BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F9C98FED2831766B00EA80BB /* Alcohol-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Alcohol-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9C98FF12831766B00EA80BB /* Alcohol_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alcohol_AppTests.swift; sourceTree = "<group>"; };
+		F9C98FF72831766B00EA80BB /* Alcohol-AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Alcohol-AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9C98FFB2831766B00EA80BB /* Alcohol_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alcohol_AppUITests.swift; sourceTree = "<group>"; };
+		F9C98FFD2831766B00EA80BB /* Alcohol_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alcohol_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9C98FDA2831766900EA80BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9C98FEA2831766B00EA80BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9C98FF42831766B00EA80BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F9C98FD42831766900EA80BB = {
+			isa = PBXGroup;
+			children = (
+				F9C98FDF2831766900EA80BB /* Alcohol-App */,
+				F9C98FF02831766B00EA80BB /* Alcohol-AppTests */,
+				F9C98FFA2831766B00EA80BB /* Alcohol-AppUITests */,
+				F9C98FDE2831766900EA80BB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F9C98FDE2831766900EA80BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9C98FDD2831766900EA80BB /* Alcohol-App.app */,
+				F9C98FED2831766B00EA80BB /* Alcohol-AppTests.xctest */,
+				F9C98FF72831766B00EA80BB /* Alcohol-AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9C98FDF2831766900EA80BB /* Alcohol-App */ = {
+			isa = PBXGroup;
+			children = (
+				F9C98FE02831766900EA80BB /* Alcohol_AppApp.swift */,
+				F9C98FE22831766900EA80BB /* ContentView.swift */,
+				F9C98FE42831766B00EA80BB /* Assets.xcassets */,
+				F9C98FE62831766B00EA80BB /* Preview Content */,
+			);
+			path = "Alcohol-App";
+			sourceTree = "<group>";
+		};
+		F9C98FE62831766B00EA80BB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F9C98FE72831766B00EA80BB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F9C98FF02831766B00EA80BB /* Alcohol-AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				F9C98FF12831766B00EA80BB /* Alcohol_AppTests.swift */,
+			);
+			path = "Alcohol-AppTests";
+			sourceTree = "<group>";
+		};
+		F9C98FFA2831766B00EA80BB /* Alcohol-AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F9C98FFB2831766B00EA80BB /* Alcohol_AppUITests.swift */,
+				F9C98FFD2831766B00EA80BB /* Alcohol_AppUITestsLaunchTests.swift */,
+			);
+			path = "Alcohol-AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9C98FDC2831766900EA80BB /* Alcohol-App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9C990012831766B00EA80BB /* Build configuration list for PBXNativeTarget "Alcohol-App" */;
+			buildPhases = (
+				F9C98FD92831766900EA80BB /* Sources */,
+				F9C98FDA2831766900EA80BB /* Frameworks */,
+				F9C98FDB2831766900EA80BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Alcohol-App";
+			productName = "Alcohol-App";
+			productReference = F9C98FDD2831766900EA80BB /* Alcohol-App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F9C98FEC2831766B00EA80BB /* Alcohol-AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9C990042831766B00EA80BB /* Build configuration list for PBXNativeTarget "Alcohol-AppTests" */;
+			buildPhases = (
+				F9C98FE92831766B00EA80BB /* Sources */,
+				F9C98FEA2831766B00EA80BB /* Frameworks */,
+				F9C98FEB2831766B00EA80BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9C98FEF2831766B00EA80BB /* PBXTargetDependency */,
+			);
+			name = "Alcohol-AppTests";
+			productName = "Alcohol-AppTests";
+			productReference = F9C98FED2831766B00EA80BB /* Alcohol-AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F9C98FF62831766B00EA80BB /* Alcohol-AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9C990072831766B00EA80BB /* Build configuration list for PBXNativeTarget "Alcohol-AppUITests" */;
+			buildPhases = (
+				F9C98FF32831766B00EA80BB /* Sources */,
+				F9C98FF42831766B00EA80BB /* Frameworks */,
+				F9C98FF52831766B00EA80BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9C98FF92831766B00EA80BB /* PBXTargetDependency */,
+			);
+			name = "Alcohol-AppUITests";
+			productName = "Alcohol-AppUITests";
+			productReference = F9C98FF72831766B00EA80BB /* Alcohol-AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9C98FD52831766900EA80BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					F9C98FDC2831766900EA80BB = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					F9C98FEC2831766B00EA80BB = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F9C98FDC2831766900EA80BB;
+					};
+					F9C98FF62831766B00EA80BB = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F9C98FDC2831766900EA80BB;
+					};
+				};
+			};
+			buildConfigurationList = F9C98FD82831766900EA80BB /* Build configuration list for PBXProject "Alcohol-App" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F9C98FD42831766900EA80BB;
+			productRefGroup = F9C98FDE2831766900EA80BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9C98FDC2831766900EA80BB /* Alcohol-App */,
+				F9C98FEC2831766B00EA80BB /* Alcohol-AppTests */,
+				F9C98FF62831766B00EA80BB /* Alcohol-AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9C98FDB2831766900EA80BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9C98FE82831766B00EA80BB /* Preview Assets.xcassets in Resources */,
+				F9C98FE52831766B00EA80BB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9C98FEB2831766B00EA80BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9C98FF52831766B00EA80BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9C98FD92831766900EA80BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9C98FE32831766900EA80BB /* ContentView.swift in Sources */,
+				F9C98FE12831766900EA80BB /* Alcohol_AppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9C98FE92831766B00EA80BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9C98FF22831766B00EA80BB /* Alcohol_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9C98FF32831766B00EA80BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9C98FFC2831766B00EA80BB /* Alcohol_AppUITests.swift in Sources */,
+				F9C98FFE2831766B00EA80BB /* Alcohol_AppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9C98FEF2831766B00EA80BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9C98FDC2831766900EA80BB /* Alcohol-App */;
+			targetProxy = F9C98FEE2831766B00EA80BB /* PBXContainerItemProxy */;
+		};
+		F9C98FF92831766B00EA80BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9C98FDC2831766900EA80BB /* Alcohol-App */;
+			targetProxy = F9C98FF82831766B00EA80BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F9C98FFF2831766B00EA80BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F9C990002831766B00EA80BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F9C990022831766B00EA80BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Alcohol-App/Preview Content\"";
+				DEVELOPMENT_TEAM = 3M9VUS7RY7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Samurai.Alcohol-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F9C990032831766B00EA80BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Alcohol-App/Preview Content\"";
+				DEVELOPMENT_TEAM = 3M9VUS7RY7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Samurai.Alcohol-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F9C990052831766B00EA80BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3M9VUS7RY7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Samurai.Alcohol-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alcohol-App.app/Alcohol-App";
+			};
+			name = Debug;
+		};
+		F9C990062831766B00EA80BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3M9VUS7RY7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Samurai.Alcohol-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alcohol-App.app/Alcohol-App";
+			};
+			name = Release;
+		};
+		F9C990082831766B00EA80BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3M9VUS7RY7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Samurai.Alcohol-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Alcohol-App";
+			};
+			name = Debug;
+		};
+		F9C990092831766B00EA80BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3M9VUS7RY7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Samurai.Alcohol-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Alcohol-App";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9C98FD82831766900EA80BB /* Build configuration list for PBXProject "Alcohol-App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9C98FFF2831766B00EA80BB /* Debug */,
+				F9C990002831766B00EA80BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9C990012831766B00EA80BB /* Build configuration list for PBXNativeTarget "Alcohol-App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9C990022831766B00EA80BB /* Debug */,
+				F9C990032831766B00EA80BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9C990042831766B00EA80BB /* Build configuration list for PBXNativeTarget "Alcohol-AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9C990052831766B00EA80BB /* Debug */,
+				F9C990062831766B00EA80BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9C990072831766B00EA80BB /* Build configuration list for PBXNativeTarget "Alcohol-AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9C990082831766B00EA80BB /* Debug */,
+				F9C990092831766B00EA80BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F9C98FD52831766900EA80BB /* Project object */;
+}
