@@ -9,17 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        var Search_view = false
+        if (Search_view == true){
+            SearchView()
+        }
         ZStack{
             LinearGradient(gradient: Gradient(colors: [.brown, .white]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
             VStack{
                 HStack{
-                    Image(systemName: "globe.asia.australia")
-                        .renderingMode(.original)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 125, height: 125)
-                        .padding(30)
+                    Button {
+                        Search_view = true
+                    } label: {
+                        Image(systemName: "globe")
+                            .renderingMode(.original)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 125, height: 125)
+                            .padding(30)
+                    }
+
                     HStack{
                         Image(systemName: "person.3")
                             .renderingMode(.original)
@@ -57,7 +66,7 @@ struct ContentView: View {
                         .frame(width: 75, height: 75)
                         .padding(15)
                 }
-                Spacer()
+                
             }
         }
     }
