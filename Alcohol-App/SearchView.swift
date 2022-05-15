@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct SearchView: View {
+    @State private var searchText = ""
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            LinearGradient(gradient: Gradient(colors: [.brown, .white]), startPoint: .top, endPoint: .bottom)
+                .edgesIgnoringSafeArea(.all)
+        
+            NavigationView {
+                      Text("Searching for \(searchText)")
+                          .searchable(text: $searchText)
+                          .navigationTitle("Search For Beer!")
+            }
+        }
     }
 }
 
@@ -18,3 +28,6 @@ struct SearchView_Previews: PreviewProvider {
         SearchView()
     }
 }
+    
+    
+    
