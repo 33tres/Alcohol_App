@@ -17,7 +17,7 @@ struct SearchView: View {
             NavigationView {
                       Text("Searching for \(searchText)")
                           .searchable(text: $searchText)
-                          .navigationTitle("Search For Beer!")
+                          .navigationTitle("Search for a Drink!")
             }
         }
     }

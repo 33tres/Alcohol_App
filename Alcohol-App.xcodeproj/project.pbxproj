@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DDB4DFFA28318B1D00B894EE /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB4DFF928318B1D00B894EE /* SearchView.swift */; };
+		F90AFD8A28319A0E00A4D5EA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90AFD8928319A0E00A4D5EA /* ProfileView.swift */; };
 		F9C98FE12831766900EA80BB /* Alcohol_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C98FE02831766900EA80BB /* Alcohol_AppApp.swift */; };
 		F9C98FE32831766900EA80BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C98FE22831766900EA80BB /* ContentView.swift */; };
 		F9C98FE52831766B00EA80BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9C98FE42831766B00EA80BB /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		DDB4DFF928318B1D00B894EE /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		F90AFD8928319A0E00A4D5EA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F9C98FDD2831766900EA80BB /* Alcohol-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alcohol-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9C98FE02831766900EA80BB /* Alcohol_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alcohol_AppApp.swift; sourceTree = "<group>"; };
 		F9C98FE22831766900EA80BB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				F9C98FE02831766900EA80BB /* Alcohol_AppApp.swift */,
 				F9C98FE22831766900EA80BB /* ContentView.swift */,
 				DDB4DFF928318B1D00B894EE /* SearchView.swift */,
+				F90AFD8928319A0E00A4D5EA /* ProfileView.swift */,
 				F9C98FE42831766B00EA80BB /* Assets.xcassets */,
 				F9C98FE62831766B00EA80BB /* Preview Content */,
 			);
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F90AFD8A28319A0E00A4D5EA /* ProfileView.swift in Sources */,
 				F9C98FE32831766900EA80BB /* ContentView.swift in Sources */,
 				DDB4DFFA28318B1D00B894EE /* SearchView.swift in Sources */,
 				F9C98FE12831766900EA80BB /* Alcohol_AppApp.swift in Sources */,

@@ -61,7 +61,7 @@ struct ContentView: View {
                             .frame(width: 75, height: 75)
                             .padding(15)
                         }
-                        NavigationLink(destination: SearchView()){
+                        NavigationLink(destination: ProfileView()){
                             Image(systemName: "person")
                             .renderingMode(.original)
                             .resizable()
