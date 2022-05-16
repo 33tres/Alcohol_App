@@ -10,16 +10,17 @@ import SwiftUI
 struct SearchView: View {
     @State private var searchText = ""
     var body: some View {
-        ZStack{
-            LinearGradient(gradient: Gradient(colors: [.brown, .white]), startPoint: .top, endPoint: .bottom)
-                .edgesIgnoringSafeArea(.all)
+        let customGreen = Color(red: 0.70, green: 0.81, blue: 0.67)
+     
         
             NavigationView {
                       Text("Searching for \(searchText)")
                           .searchable(text: $searchText)
                           .navigationTitle("Search for a Drink!")
-            }
+                        
+            
         }
+        
     }
 }
 

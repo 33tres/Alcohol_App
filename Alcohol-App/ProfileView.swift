@@ -10,6 +10,9 @@ import SwiftUI
 struct ProfileView: View {
     var body: some View {
         let customGreen = Color(red: 0.70, green: 0.81, blue: 0.67)
+        let customLightGreen = Color(red: 0.750, green: 0.85, blue: 0.67)
+        
+        
         ScrollView{
            
             VStack{
@@ -20,53 +23,102 @@ struct ProfileView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 75, height: 75)
                     .padding(15)
+                    .background(customLightGreen)
+              
                 }
                 HStack{
                   Text("Username")
+                       
+                        .font(.title).bold()
+                        .background(customLightGreen)
+                      
                 }
                 
                 HStack{
-                    Text("Email")
+                    Text("Email@email.com")
+                        .bold()
+                        .padding(1)
+                        .background(customLightGreen)
+                        
                 }
                 VStack{
                 HStack{
-                
                     Text("# of Beers")
                         .padding(15)
-                        .frame(width: 150, height: 100)
-                        
+                        .frame(width: 150, height: 50)
+                        .background(customLightGreen)
+                        .padding(15)
+                    ProgressView(value: 0.4)
+                        .frame(width: 150, height: 50)
+                        .background(customLightGreen)
+                        .padding(15)
+
                 }
-                HStack{
-                    ProgressView(value: 0.2)
-                        .frame(width: 160, height: 75)
-                }
+               
                     HStack{
                         Text("# of Vodkas")
                             .padding(15)
-                            .frame(width: 150, height: 125)
+                            .frame(width: 150, height: 50)
+                            .background(customLightGreen)
+                            .padding(15)
                         ProgressView(value: 0.2)
-                            .frame(width: 160, height: 125)
+                            .frame(width: 150, height: 50)
+                            .background(customLightGreen)
+                            .padding(15)
                     }
                     HStack{
                         Text("# of Gins")
+                            .frame(width: 150, height: 50)
+                            .background(customLightGreen)
                             .padding(15)
-                            .frame(width: 150, height: 125)
                         ProgressView(value: 0.2)
-                            .frame(width: 160, height: 125)
+                            .frame(width: 150, height: 50)
+                            .background(customLightGreen)
+                            .padding(15)
                     }
                     HStack{
                         Text("# of Whiskeys")
                             .padding(15)
-                            .frame(width: 150, height: 125)
+                            .frame(width: 150, height: 50)
+                            .background(customLightGreen)
+                            .padding(15)
                         ProgressView(value: 0.2)
-                            .frame(width: 160, height: 125)
+                            .frame(width: 150, height: 50)
+                            .background(customLightGreen)
+                            .padding(15)
                     }
+                    HStack{
+                        Text("# of Spirits")
+                            .padding(15)
+                            .frame(width: 150, height: 50)
+                            .background(customLightGreen)
+                            .padding(15)
+                        ProgressView(value: 0.2)
+                            .frame(width: 150, height: 50)
+                            .background(customLightGreen)
+                            .padding(15)
+                        }
+                    HStack{
+                        Text("# of Rum")
+                            .padding(15)
+                            .frame(width: 150, height: 50)
+                            .background(customLightGreen)
+                            .padding(15)
+                        ProgressView(value: 0.2)
+                            .frame(width: 150, height: 50)
+                            .background(customLightGreen)
+                            .padding(15)
+                        }
                     HStack{
                         Text("# of Cocktails")
                             .padding(15)
-                            .frame(width: 150, height: 125)
+                            .frame(width: 150, height: 50)
+                            .background(customLightGreen)
+                            .padding(15)
                         ProgressView(value: 0.2)
-                            .frame(width: 160, height: 125)
+                            .frame(width: 150, height: 50)
+                            .background(customLightGreen)
+                            .padding(15)
                         }
                     }
                 }
