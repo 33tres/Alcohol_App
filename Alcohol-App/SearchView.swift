@@ -10,17 +10,11 @@ import SwiftUI
 struct SearchView: View {
     @State private var searchText = ""
     var body: some View {
-        let customGreen = Color(red: 0.70, green: 0.81, blue: 0.67)
-     
-        
-            NavigationView {
+        NavigationView{
                       Text("Searching for \(searchText)")
                           .searchable(text: $searchText)
                           .navigationTitle("Search for a Drink!")
-                        
-            
         }
-        
     }
 }
 
