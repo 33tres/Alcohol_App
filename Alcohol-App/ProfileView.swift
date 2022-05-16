@@ -88,7 +88,7 @@ struct ProfileView: View {
                             .padding(15)
                     }
                     HStack{
-                        Text("# of Spirits")
+                        Text("# of Wines")
                             .padding(15)
                             .frame(width: 150, height: 50)
                             .background(customLightGreen)
