@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        ZStack{
-            LinearGradient(gradient: Gradient(colors: [.brown, .white]), startPoint: .top, endPoint: .bottom)
-            .edgesIgnoringSafeArea(.all)
+        let customGreen = Color(red: 0.70, green: 0.81, blue: 0.67)
+        ScrollView{
+           
             VStack{
                 VStack{
                     Image(systemName: "person")
@@ -30,39 +30,49 @@ struct ProfileView: View {
                 }
                 VStack{
                 HStack{
-                    
-                    
-                    Text("#I")
+                
+                    Text("# of Beers")
                         .padding(15)
-                        .frame(width: 200, height: 125)
+                        .frame(width: 150, height: 100)
+                        
+                }
+                HStack{
                     ProgressView(value: 0.2)
-                        .frame(width: 160, height: 125)
+                        .frame(width: 160, height: 75)
                 }
                     HStack{
-                        Text("#Needed")
+                        Text("# of Vodkas")
                             .padding(15)
-                            .frame(width: 200, height: 125)
+                            .frame(width: 150, height: 125)
                         ProgressView(value: 0.2)
                             .frame(width: 160, height: 125)
                     }
                     HStack{
-                        Text("#The")
+                        Text("# of Gins")
                             .padding(15)
-                            .frame(width: 200, height: 125)
+                            .frame(width: 150, height: 125)
                         ProgressView(value: 0.2)
                             .frame(width: 160, height: 125)
                     }
                     HStack{
-                        Text("#Notebook")
+                        Text("# of Whiskeys")
                             .padding(15)
-                            .frame(width: 200, height: 125)
+                            .frame(width: 150, height: 125)
                         ProgressView(value: 0.2)
                             .frame(width: 160, height: 125)
+                    }
+                    HStack{
+                        Text("# of Cocktails")
+                            .padding(15)
+                            .frame(width: 150, height: 125)
+                        ProgressView(value: 0.2)
+                            .frame(width: 160, height: 125)
+                        }
                     }
                 }
             }
-            }
-           
+        .frame(maxWidth: .infinity)
+        .background(customGreen)
         }
     }
 
