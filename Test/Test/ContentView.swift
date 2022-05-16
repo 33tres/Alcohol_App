@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  Alcohol-App
+//  Test
 //
-//  Created by Samuel Harrell on 5/15/22.
+//  Created by David Harrell on 5/15/22.
 //
 
 import SwiftUI
@@ -16,16 +16,12 @@ struct ContentView: View {
                 }
             SearchView()
                 .tabItem(){
-                    Image(systemName: "magnifyingglass")
-                }
-            FriendsView()
-                .tabItem(){
-                    Image(systemName: "person.3")
+                    Image(systemName: "car")
                 }
             ProfileView()
                 .tabItem(){
-                    Image(systemName: "person.circle")
-            }
+                    Image(systemName: "mic")
+                }
         }
     }
 }
