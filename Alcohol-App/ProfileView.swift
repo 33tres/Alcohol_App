@@ -14,120 +14,62 @@ struct ProfileView: View {
         let customRed = Color(red: 0.71, green: 0.30, blue: 0.18)
         
         
-        ScrollView{
-           
-            VStack{
-                VStack{
-                    Image(systemName: "person")
-                    .renderingMode(.original)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 75, height: 75)
-                    .padding(15)
-                    .background(customLightGreen)
-              
-                }
-                HStack{
-                  Text("Username")
+        VStack {
+            ScrollView{
+             
+                    
                        
-                        .font(.title).bold()
-                        .background(customLightGreen)
-                      
+                    HStack{
+                        Image(systemName: "bag.fill")
+                        .renderingMode(.original)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 75, height: 75)
+                        .padding(15)
+                   
+                    } .frame(width: 200, height: 200)
+                        .background(customRed)
+                        .cornerRadius(20)
+                        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
+                        .shadow(color: customRed.opacity(0.3), radius: 20, x: 0, y: 10)
+                        .padding(10)
+                    
+                HStack{
+                    
+                    Menu("Click to view progress") {
+                        Button("Beer", action: showBeer)
+                        Button("Vodka", action: showVodka)
+                        Button("Tequila", action: showTequila)
+        
+                    }.foregroundColor(.white)
+                   
+                    
                 }
+                .frame(width: 200, height: 200)
+                    .background(customRed)
+                    .cornerRadius(20)
+                    .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
+                    .shadow(color: customRed.opacity(0.3), radius: 20, x: 0, y: 10)
+                    .padding(10)
                 
-                HStack{
-                    Text("Email@email.com")
-                        .bold()
-                        .padding(1)
-                        .background(customLightGreen)
-                        
-                }
-                VStack{
-                HStack{
-                    Text("# of Beers")
-                        .padding(15)
-                        .frame(width: 150, height: 50)
-                        .background(customLightGreen)
-                        .padding(15)
-                    ProgressView(value: 0.4)
-                        .frame(width: 150, height: 50)
-                        .background(customLightGreen)
-                        .padding(15)
-
-                }
+                    }
+                
                
-                    HStack{
-                        Text("# of Vodkas")
-                            .padding(15)
-                            .frame(width: 150, height: 50)
-                            .background(customLightGreen)
-                            .padding(15)
-                        ProgressView(value: 0.2)
-                            .frame(width: 150, height: 50)
-                            .background(customLightGreen)
-                            .padding(15)
-                    }
-                    HStack{
-                        Text("# of Gins")
-                            .frame(width: 150, height: 50)
-                            .background(customLightGreen)
-                            .padding(15)
-                        ProgressView(value: 0.2)
-                            .frame(width: 150, height: 50)
-                            .background(customLightGreen)
-                            .padding(15)
-                    }
-                    HStack{
-                        Text("# of Whiskeys")
-                            .padding(15)
-                            .frame(width: 150, height: 50)
-                            .background(customLightGreen)
-                            .padding(15)
-                        ProgressView(value: 0.2)
-                            .frame(width: 150, height: 50)
-                            .background(customLightGreen)
-                            .padding(15)
-                    }
-                    HStack{
-                        Text("# of Wines")
-                            .padding(15)
-                            .frame(width: 150, height: 50)
-                            .background(customLightGreen)
-                            .padding(15)
-                        ProgressView(value: 0.2)
-                            .frame(width: 150, height: 50)
-                            .background(customLightGreen)
-                            .padding(15)
-                        }
-                    HStack{
-                        Text("# of Rum")
-                            .padding(15)
-                            .frame(width: 150, height: 50)
-                            .background(customLightGreen)
-                            .padding(15)
-                        ProgressView(value: 0.2)
-                            .frame(width: 150, height: 50)
-                            .background(customLightGreen)
-                            .padding(15)
-                        }
-                    HStack{
-                        Text("# of Cocktails")
-                            .padding(15)
-                            .frame(width: 150, height: 50)
-                            .background(customLightGreen)
-                            .padding(15)
-                        ProgressView(value: 0.2)
-                            .frame(width: 150, height: 50)
-                            .background(customLightGreen)
-                            .padding(15)
-                        }
-                    }
-                }
-            }
-        .frame(maxWidth: .infinity)
+            .frame(maxWidth: .infinity)
         .background(customGreen)
+           
         }
+        }
+    func showBeer() {
+        
+
     }
+      func showVodka() { }
+      func showTequila() { }
+        }
+       
+        
+
 
 
 struct ProfileView_Previews: PreviewProvider {
