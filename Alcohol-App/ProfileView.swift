@@ -11,6 +11,7 @@ struct ProfileView: View {
     var body: some View {
         let customGreen = Color(red: 0.70, green: 0.81, blue: 0.67)
         let customLightGreen = Color(red: 0.750, green: 0.85, blue: 0.67)
+        let customRed = Color(red: 0.71, green: 0.30, blue: 0.18)
         
         
         ScrollView{

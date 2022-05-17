@@ -12,36 +12,53 @@ struct FriendsView: View {
         "Friend \($0)" }
     let image =  Image(systemName: "person")
     let columns = [
-        GridItem(.adaptive(minimum: 150))
+        GridItem(.adaptive(minimum: 100))
     ]
     let customGreen = Color(red: 0.70, green: 0.81, blue: 0.67)
     let customLightGreen = Color(red: 0.750, green: 0.85, blue: 0.67)
+    let customRed = Color(red: 0.71, green: 0.30, blue: 0.18)
 
     var body: some View {
         ScrollView {
-            HStack{
+            
+                
+            
+            
+            ScrollView {
                 Text("Friends List")
                     .font(.title).bold().underline()
-            }
-            
-            LazyVGrid(columns: columns, spacing: 40) {
+                    .foregroundColor(.white)
+                    .padding()
+                    
+                    
+                LazyVGrid(columns: columns, spacing: 30) {
+                    
+                        
                 
                 ForEach(data, id: \.self) { item in
                     Image(systemName: "person")
                         .resizable()
-                        .frame(width: 50, height: 50)
+                        .frame(width: 70, height: 70)
                         .aspectRatio(contentMode:.fit)
-                        .padding(15)
-                        .background(customLightGreen)
+                        .foregroundColor(.white)
+                        .padding()
                     Text(item)
-                        .frame(width: 100, height: 30)
-                        .background(customLightGreen)
-                        .font(.title2)
-                        .padding(15)
+                        .font(.title).bold()
+                        .foregroundColor(.white)
+                        .shadow(radius: 20)
+                       
+                        
                     
                 }
-                
             }
+                
+                
+            }.frame(width: 300, height: 300)
+                .background(customRed)
+                .cornerRadius(20)
+                .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
+                .shadow(color: customRed.opacity(0.3), radius: 20, x: 0, y: 10)
+                .padding(10)
             
         }
         .frame(maxWidth: .infinity)
