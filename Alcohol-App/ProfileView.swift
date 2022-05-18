@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @State private var value: CGFloat = 0.0
     var body: some View {
         let customGreen = Color(red: 0.70, green: 0.81, blue: 0.67)
         let customRed = Color(red: 0.71, green: 0.30, blue: 0.18)
@@ -67,13 +68,26 @@ struct ProfileView: View {
                     
                 HStack{
                     
-                    Menu("Click to view progress") {
-                        Button("Beer", action: showBeer)
-                        Button("Vodka", action: showVodka)
-                        Button("Tequila", action: showTequila)
-        
-                    }.foregroundColor(.white)
-                   
+                   Text("0%")
+                    Slider(value: $value)
+                    Text("100%")
+                    }
+                    .padding()
+                    ZStack{
+                        Circle()
+                        .stroke(Color.gray, lineWidth : 20)
+                        .opacity(0.3)
+                        .padding()
+                        .padding()
+                        Circle()
+                            .trim(from:0, to: value)
+                            .stroke(Color.black, lineWidth: 20)
+                            .rotationEffect(.degrees(-90))
+                            .padding()
+                            .padding()
+                        
+                        
+                    
                     
                 }
                 .frame(width: 300, height: 500)
@@ -82,7 +96,8 @@ struct ProfileView: View {
                     .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
                     .shadow(color: customRed.opacity(0.3), radius: 20, x: 0, y: 10)
                     .padding(10)
-                
+                    .overlay(Text("Drink 10 Beers \(Int(value*10))/10").foregroundColor(.white)).font(.title2)
+                   
                     }
                 
                
@@ -92,15 +107,7 @@ struct ProfileView: View {
             }
         }
         }
-    func showBeer() {
-
-    }
-    func showVodka() {
-        
-    }
-    func showTequila() {
-        
-    }
+ 
         }
        
         
