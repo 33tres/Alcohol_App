@@ -14,6 +14,7 @@ struct HomeView: View {
     MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 40.75773, longitude: -75.985708), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
     
     var body: some View {
+        let drink_of_the_day = Drink(name: "Budweiser", description: "what an excellent craft masterpiece, I love this amazing drink and I drink it with my great son ", history: "beutiful man")
         let customGreen = Color(red: 0.70, green: 0.81, blue: 0.67)
         let customBrown = Color(red: 0.85, green: 0.66, blue: 0.41)
         let customgray = Color(red: 0.89, green: 0.87, blue: 0.71)
@@ -28,14 +29,21 @@ struct HomeView: View {
                         .foregroundColor(.white)
                         .shadow(radius: 20)
                 HStack{
-                    Image(systemName: "bag.fill")
-                    .renderingMode(.original)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 75, height: 75)
-                    .padding(15)
+                    VStack{
+                        Text(drink_of_the_day.name)
+                            .font(.system(size: 23))
+                            .font(.title).bold()
+                            .foregroundColor(.white)
+                            .shadow(radius: 20)
+                        Image(systemName: "bag.fill")
+                        .renderingMode(.original)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 75, height: 75)
+                        .padding(15)
+                    }
                 HStack{
-                    Text("Long description of the the alcohol maybe something like where it came from, where it is distriputed ect. just needed a long description ")
+                    Text(drink_of_the_day.description)
                         .font(.system(size: 17))
                         .font(.title).bold()
                         .foregroundColor(.white)
