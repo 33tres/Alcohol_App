@@ -74,6 +74,18 @@ struct ProfileView: View {
                     }
                     .padding()
                     ZStack{
+                        VStack{
+                            HStack{
+                                Spacer()
+                                    Menu("Drink") {
+                                        Text("Menu Item 1")
+                                        Text("Menu Item 2")
+                                        Text("Menu Item 3")
+                                    }
+                                .padding()
+                            }
+                            Spacer()
+                        }
                         Circle()
                         .stroke(Color.gray, lineWidth : 20)
                         .opacity(0.3)
