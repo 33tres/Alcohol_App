@@ -43,7 +43,7 @@ struct ProfileView: View {
                                 .shadow(radius: 20)
                                 .padding(5)
                                 VStack{
-                                Text("Email address")
+                                Text("Email Address")
                                     .font(.system(size: 15))
                                     .font(.title).bold()
                                     .foregroundColor(.white)

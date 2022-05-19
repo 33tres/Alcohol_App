@@ -14,7 +14,6 @@ struct HomeView: View {
     MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 40.75773, longitude: -75.985708), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
     
     var body: some View {
-        let drink_of_the_day = Drink(name: "Budweiser", description: "what an excellent craft masterpiece, I love this amazing drink and I drink it with my great son ", history: "beutiful man")
         let customGreen = Color(red: 0.70, green: 0.81, blue: 0.67)
         let customBrown = Color(red: 0.85, green: 0.66, blue: 0.41)
         let customgray = Color(red: 0.89, green: 0.87, blue: 0.71)
@@ -30,7 +29,7 @@ struct HomeView: View {
                         .shadow(radius: 20)
                 HStack{
                     VStack{
-                        Text(drink_of_the_day.name)
+                        Text("budweiser")
                             .font(.system(size: 23))
                             .font(.title).bold()
                             .foregroundColor(.white)
@@ -43,7 +42,7 @@ struct HomeView: View {
                         .padding(15)
                     }
                 HStack{
-                    Text(drink_of_the_day.description)
+                    Text("siudhwi wefojwofu woejfwjinf wefjwjf wefouw3uoefw fouehobwef weufhewof")
                         .font(.system(size: 17))
                         .font(.title).bold()
                         .foregroundColor(.white)
