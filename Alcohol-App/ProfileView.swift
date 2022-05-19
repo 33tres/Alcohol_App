@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ProfileView: View {
     @State private var value: CGFloat = 0.0
+    @State var toggle = Toggle()
+    @State var alcohol_type = "Drinks"
     var body: some View {
         let customGreen = Color(red: 0.70, green: 0.81, blue: 0.67)
         let customRed = Color(red: 0.71, green: 0.30, blue: 0.18)
@@ -67,7 +69,6 @@ struct ProfileView: View {
                 
                     
                 HStack{
-                    
                    Text("0%")
                     Slider(value: $value)
                     Text("100%")
@@ -77,11 +78,71 @@ struct ProfileView: View {
                         VStack{
                             HStack{
                                 Spacer()
-                                    Menu("Drink") {
-                                        Text("Menu Item 1")
-                                        Text("Menu Item 2")
-                                        Text("Menu Item 3")
+                                Menu {
+                                    Button{
+                                        toggle.toggle_drink()
+                                        alcohol_type = "Drinks"
+                                    }label:{
+                                        Text("Drink")
                                     }
+                                    Button{
+                                        toggle.toggle_beer()
+                                        alcohol_type = "Beers"
+                                    }label:{
+                                        Text("Beer")
+                                    }
+                                    Button{
+                                        toggle.toggle_cider()
+                                        alcohol_type = "Ciders"
+                                    }label:{
+                                        Text("Cider")
+                                    }
+                                    Button{
+                                        toggle.toggle_wine()
+                                        alcohol_type = "Wines"
+                                    }label:{
+                                        Text("Wine")
+                                    }
+                                    Button{
+                                        toggle.toggle_whiskey()
+                                        alcohol_type = "Whiskeys"
+                                    }label:{
+                                        Text("Whiskey")
+                                    }
+                                    Button{
+                                        toggle.toggle_gin()
+                                        alcohol_type = "Gins"
+                                    }label:{
+                                        Text("Gin")
+                                    }
+                                    Button{
+                                        toggle.toggle_rum()
+                                        alcohol_type = "Rums"
+                                    }label:{
+                                        Text("Rum")
+                                    }
+                                    Button{
+                                        toggle.toggle_vodka()
+                                        alcohol_type = "Vodkas"
+                                    }label:{
+                                        Text("Vodka")
+                                    }
+                                    Button{
+                                        toggle.toggle_tequila()
+                                        alcohol_type = "Tequilas"
+                                    }label:{
+                                        Text("Tequila")
+                                    }
+                                    Button{
+                                        toggle.toggle_specialty()
+                                        alcohol_type = "Specialties"
+                                    }label:{
+                                        Text("Specialty")
+                                    }
+                                }label: {
+                                    Image(systemName: "bag.fill")
+                                    
+                                }
                                 .padding()
                             }
                             Spacer()
@@ -91,16 +152,15 @@ struct ProfileView: View {
                         .opacity(0.3)
                         .padding()
                         .padding()
-                        Circle()
+                        if !toggle.beer_toggle{
+                            Circle()
                             .trim(from:0, to: value)
                             .stroke(Color.black, lineWidth: 20)
                             .rotationEffect(.degrees(-90))
                             .padding()
                             .padding()
-                        
-                        
-                    
-                    
+                        }
+          
                 }
                 .frame(width: 300, height: 500)
                     .background(customRed)
@@ -108,7 +168,7 @@ struct ProfileView: View {
                     .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
                     .shadow(color: customRed.opacity(0.3), radius: 20, x: 0, y: 10)
                     .padding(10)
-                    .overlay(Text("Drink 10 Beers \(Int(value*10))/10").foregroundColor(.white)).font(.title2)
+                    .overlay(Text("Drink 10 \(alcohol_type) \(Int(value*10))/10").foregroundColor(.white)).font(.title2)
                    
                     }
                 
