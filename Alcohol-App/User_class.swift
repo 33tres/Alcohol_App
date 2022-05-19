@@ -9,13 +9,13 @@ import Foundation
 
 
 class User{
-    var name: String
     var username: String
     var num_drinks_array: [Int]
+    var drink_IDs_array : [Int]
     
-    init(name: String, username: String){
-        self.name = name
+    init(username: String){
         self.username = username
-        self.num_drinks_array = Array(repeating: 0, count: 58)
+        self.num_drinks_array = Array(repeating: 0, count: 60)
+        self.drink_IDs_array = Array()
     }
 };

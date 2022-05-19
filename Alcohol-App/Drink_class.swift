@@ -9,25 +9,17 @@ import Foundation
 
 class Drink{
     var name: String
+    var ID: Int
     var description: String
     var history: String
     
-    init(name: String, description: String, history: String){
+    init(name: String, ID: Int, description: String, history: String){
         self.name = name
+        self.ID = ID
         self.description = description
         self.history = history
     }
 };
-
-class Beer: Drink{
-    
-    
-}
-
-class Ipa: Beer{
-    
-    
-}
 
 
 
