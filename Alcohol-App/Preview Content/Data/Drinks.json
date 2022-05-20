@@ -1,0 +1,20 @@
+[
+{
+"name": "Budweiser",
+"description": "A classic drink that is very popular today, originating in america it is a true classic",
+"history": "Made in kentucky in the stone age, this is where we truely made great drinks",
+"ID": 10304932
+},
+{
+"name": "Bud Light",
+"description": "A banging drink that is very popular today, originating in europe it is a true classic",
+"history": "Made in tennessee in the stone age, this is where we truely made great drinks",
+"ID": 36353456
+},
+{
+"name": "Corona",
+"description": "A spicy drink that is very popular today, originating in mexico it is a true classic",
+"history": "Made in caracas in the stone age, this is where we truely made great drinks",
+"ID": 74563255
+}
+]
