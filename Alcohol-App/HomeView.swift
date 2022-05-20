@@ -75,7 +75,7 @@ struct HomeView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 40, height: 40)
                             HStack{
-                                Text("Friend 1")
+                                Text("\(usersArray[0].username)")
                                     .font(.title).bold()
                                     .foregroundColor(.white)
                                     .shadow(radius: 20)
@@ -89,7 +89,7 @@ struct HomeView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 40, height: 40)
                             HStack{
-                                Text("Friend 2")
+                                Text("\(usersArray[1].username)")
                                     .font(.title).bold()
                                     .foregroundColor(.white)
                                     .shadow(radius: 20)
@@ -103,7 +103,7 @@ struct HomeView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 40, height: 40)
                             HStack{
-                                Text("Friend 3")
+                                Text("\(usersArray[2].username)")
                                     .font(.title).bold()
                                     .foregroundColor(.white)
                                     .shadow(radius: 20)

@@ -26,13 +26,17 @@ struct Drink: Codable {
 
 struct User: Codable {
     let username: String
+    let ID: Int
     let numDrinksArray: [Int]
     let drinkIDsArray: [Int]
+    let friendIDsArray: [Int]
 
     enum CodingKeys: String, CodingKey {
         case username
+        case ID
         case numDrinksArray = "num_drinks_array"
         case drinkIDsArray = "drink_IDs_array"
+        case friendIDsArray = "friend_IDs_array"
     }
     
     static let allUsers: [User] = Bundle.main.decode(file: "Users.json")
