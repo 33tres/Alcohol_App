@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    private var drinksArray: [Drink] = Drink.allDrinks
-    private var usersArray: [User] = User.allUsers
     var body: some View {
         TabView{
             HomeView()

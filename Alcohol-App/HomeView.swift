@@ -9,6 +9,8 @@ import SwiftUI
 import MapKit
 
 struct HomeView: View {
+    var drinksArray: [Drink] = Drink.allDrinks
+    var usersArray: [User] = User.allUsers
     
     @State private var region: MKCoordinateRegion =
     MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 40.75773, longitude: -75.985708), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
@@ -29,11 +31,12 @@ struct HomeView: View {
                         .shadow(radius: 20)
                 HStack{
                     VStack{
-                        Text("budweiser")
+                        Text("\(drinksArray[0].name)")
                             .font(.system(size: 23))
                             .font(.title).bold()
                             .foregroundColor(.white)
                             .shadow(radius: 20)
+                            .padding(5)
                         Image(systemName: "bag.fill")
                         .renderingMode(.original)
                         .resizable()
@@ -42,7 +45,7 @@ struct HomeView: View {
                         .padding(15)
                     }
                 HStack{
-                    Text("siudhwi wefojwofu woejfwjinf wefjwjf wefouw3uoefw fouehobwef weufhewof")
+                    Text("\(drinksArray[0].description)")
                         .font(.system(size: 17))
                         .font(.title).bold()
                         .foregroundColor(.white)

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ProfileView: View {
+    var drinksArray: [Drink] = Drink.allDrinks
+    var usersArray: [User] = User.allUsers
+    
     @State private var value: CGFloat = 0.0
     @State var toggle = Toggle()
     @State var alcohol_type = "Drinks"

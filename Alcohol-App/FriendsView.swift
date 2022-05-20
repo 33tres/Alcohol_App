@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct FriendsView: View {
+    var drinksArray: [Drink] = Drink.allDrinks
+    var usersArray: [User] = User.allUsers
+    
     let data = (1...50).map {
         "Friend \($0)" }
     let image =  Image(systemName: "person")

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SearchView: View {
+    var drinksArray: [Drink] = Drink.allDrinks
+    var usersArray: [User] = User.allUsers
+    
     @State private var searchText = ""
     var body: some View {
         NavigationView{
