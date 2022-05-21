@@ -96,6 +96,14 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		DD6237382839403B004BB384 /* Toggles */ = {
+			isa = PBXGroup;
+			children = (
+				DD62372A2836B10D004BB384 /* Toggle.swift */,
+			);
+			path = Toggles;
+			sourceTree = "<group>";
+		};
 		F9C98FD42831766900EA80BB = {
 			isa = PBXGroup;
 			children = (
@@ -125,7 +133,7 @@
 				DD96F80E2831D5EA00815FC7 /* FriendsView.swift */,
 				F90AFD8928319A0E00A4D5EA /* ProfileView.swift */,
 				F9C98FE22831766900EA80BB /* ContentView.swift */,
-				DD62372A2836B10D004BB384 /* Toggle.swift */,
+				DD6237382839403B004BB384 /* Toggles */,
 				F9C98FE42831766B00EA80BB /* Assets.xcassets */,
 				F9C98FE62831766B00EA80BB /* Preview Content */,
 			);
