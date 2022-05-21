@@ -64,10 +64,10 @@ struct ProfileView: View {
                                     .cornerRadius(20)
                                     .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
                                     .shadow(color: customRed.opacity(0.3), radius: 20, x: 0, y: 10)
-                                }
-                            }
-                        }
-                    }
+                                } // vstack
+                            } //vstack
+                        } // hstack
+                    } // hstack
                 
                     ZStack{
                         VStack{
@@ -140,9 +140,9 @@ struct ProfileView: View {
                                     
                                 }
                                 .padding()
-                            }
+                            } // menu
                             Spacer()
-                        }
+                        } // hstack
                         Circle()
                         .stroke(Color.gray, lineWidth : 20)
                         .opacity(0.3)
@@ -260,27 +260,22 @@ struct ProfileView: View {
                             .font(.system(size: 20))
                             .font(.title).bold()
                         }
-          
-                }
-                .frame(width: 300, height: 500)
-                    .background(customRed)
-                    .cornerRadius(20)
-                    .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
-                    .shadow(color: customRed.opacity(0.3), radius: 20, x: 0, y: 10)
-                    .padding(10)
-                    // .overlay(Text("Drink 10 \(alcohol_type) \(current_user))/10").foregroundColor(.white)).font(.title2)
-                   
-                    }
-                
-               
-            .frame(maxWidth: .infinity)
-        .background(customGreen)
-           
-            }
-        }
-        }
- 
-        }
+                        } // vstack
+                        .frame(width: 300, height: 500)
+                        .background(customRed)
+                        .cornerRadius(20)
+                        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
+                        .shadow(color: customRed.opacity(0.3), radius: 20, x: 0, y: 10)
+                        .padding(10)
+                        // .overlay(Text("Drink 10 \(alcohol_type) \(current_user))/10").foregroundColor(.white)).font(.title2)
+                        } // zstack
+                    } // scroll view
+                .frame(maxWidth: .infinity)
+                .background(customGreen)
+            } // hstack
+        } // vstack
+    } // var body: some view
+} // Profile View
        
         
 
