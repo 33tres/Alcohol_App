@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     var drinksArray: [Drink] = Drink.allDrinks
-    var usersArray: [User] = User.allUsers
+    var current_user: User = User.allUsers[0]
     
     @State private var value: CGFloat = 0.0
     @State var toggle = Toggle()
@@ -39,7 +39,7 @@ struct ProfileView: View {
                         .padding(.trailing)
                         HStack{
                             VStack{
-                            Text("Username")
+                                Text("\(current_user.username)")
                                 .font(.system(size: 15))
                                 .font(.title).bold()
                                 .foregroundColor(.white)

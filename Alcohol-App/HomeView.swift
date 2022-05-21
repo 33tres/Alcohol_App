@@ -31,7 +31,7 @@ struct HomeView: View {
                         .shadow(radius: 20)
                 HStack{
                     VStack{
-                        Text("\(drinksArray[0].name)")
+                        Text("\(drinksArray[2].name)")
                             .font(.system(size: 23))
                             .font(.title).bold()
                             .foregroundColor(.white)
@@ -45,7 +45,7 @@ struct HomeView: View {
                         .padding(15)
                     }
                 HStack{
-                    Text("\(drinksArray[0].description)")
+                    Text("\(drinksArray[2].description)")
                         .font(.system(size: 17))
                         .font(.title).bold()
                         .foregroundColor(.white)
