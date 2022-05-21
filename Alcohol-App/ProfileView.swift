@@ -11,7 +11,6 @@ struct ProfileView: View {
     var drinksArray: [Drink] = Drink.allDrinks
     var current_user: User = User.allUsers[0]
     
-    @State private var value: CGFloat = 0.0
     @State var toggle = Toggle()
     @State var alcohol_type = "Drinks"
     var body: some View {
@@ -46,7 +45,7 @@ struct ProfileView: View {
                                 .shadow(radius: 20)
                                 .padding(5)
                                 VStack{
-                                Text("Email Address")
+                                    Text("\(current_user.email)")
                                     .font(.system(size: 15))
                                     .font(.title).bold()
                                     .foregroundColor(.white)
@@ -70,18 +69,12 @@ struct ProfileView: View {
                         }
                     }
                 
-                    
-                HStack{
-                   Text("0%")
-                    Slider(value: $value)
-                    Text("100%")
-                    }
-                    .padding()
                     ZStack{
                         VStack{
                             HStack{
                                 Spacer()
                                 Menu {
+                                    // Button code for the top button
                                     Button{
                                         toggle.toggle_drink()
                                         alcohol_type = "Drinks"
@@ -155,13 +148,117 @@ struct ProfileView: View {
                         .opacity(0.3)
                         .padding()
                         .padding()
-                        if !toggle.beer_toggle{
+                        
+                        // All of the code for the different drink toggles, very long
+                        if toggle.drink_toggle{
                             Circle()
-                            .trim(from:0, to: value)
+                            .trim(from:0, to: CGFloat(current_user.numDrinksArray[0]) / 10)
                             .stroke(Color.black, lineWidth: 20)
                             .rotationEffect(.degrees(-90))
                             .padding()
                             .padding()
+                            Text("Try 10 Drinks \(current_user.numDrinksArray[0])/10")
+                            .font(.system(size: 20))
+                            .font(.title).bold()
+                        }
+                        if toggle.beer_toggle{
+                            Circle()
+                            .trim(from:0, to: CGFloat(current_user.numDrinksArray[1]) / 10)
+                            .stroke(Color.black, lineWidth: 20)
+                            .rotationEffect(.degrees(-90))
+                            .padding()
+                            .padding()
+                            Text("Try 10 Beers \(current_user.numDrinksArray[1])/10")
+                            .font(.system(size: 20))
+                            .font(.title).bold()
+                        }
+                        if toggle.cider_toggle{
+                            Circle()
+                            .trim(from:0, to: CGFloat(current_user.numDrinksArray[9]) / 10)
+                            .stroke(Color.black, lineWidth: 20)
+                            .rotationEffect(.degrees(-90))
+                            .padding()
+                            .padding()
+                            Text("Try 10 Ciders \(current_user.numDrinksArray[9])/10")
+                            .font(.system(size: 20))
+                            .font(.title).bold()
+                        }
+                        if toggle.wine_toggle{
+                            Circle()
+                            .trim(from:0, to: CGFloat(current_user.numDrinksArray[10]) / 10)
+                            .stroke(Color.black, lineWidth: 20)
+                            .rotationEffect(.degrees(-90))
+                            .padding()
+                            .padding()
+                            Text("Try 10 Wines \(current_user.numDrinksArray[10])/10")
+                            .font(.system(size: 20))
+                            .font(.title).bold()
+                        }
+                        if toggle.whiskey_toggle{
+                            Circle()
+                            .trim(from:0, to: CGFloat(current_user.numDrinksArray[19]) / 10)
+                            .stroke(Color.black, lineWidth: 20)
+                            .rotationEffect(.degrees(-90))
+                            .padding()
+                            .padding()
+                            Text("Try 10 Whiskeys \(current_user.numDrinksArray[19])/10")
+                            .font(.system(size: 20))
+                            .font(.title).bold()
+                        }
+                        if toggle.gin_toggle{
+                            Circle()
+                            .trim(from:0, to: CGFloat(current_user.numDrinksArray[28]) / 10)
+                            .stroke(Color.black, lineWidth: 20)
+                            .rotationEffect(.degrees(-90))
+                            .padding()
+                            .padding()
+                            Text("Try 10 Gins \(current_user.numDrinksArray[28])/10")
+                            .font(.system(size: 20))
+                            .font(.title).bold()
+                        }
+                        if toggle.rum_toggle{
+                            Circle()
+                            .trim(from:0, to: CGFloat(current_user.numDrinksArray[33]) / 10)
+                            .stroke(Color.black, lineWidth: 20)
+                            .rotationEffect(.degrees(-90))
+                            .padding()
+                            .padding()
+                            Text("Try 10 Rums \(current_user.numDrinksArray[33])/10")
+                            .font(.system(size: 20))
+                            .font(.title).bold()
+                        }
+                        if toggle.vodka_toggle{
+                            Circle()
+                            .trim(from:0, to: CGFloat(current_user.numDrinksArray[46]) / 10)
+                            .stroke(Color.black, lineWidth: 20)
+                            .rotationEffect(.degrees(-90))
+                            .padding()
+                            .padding()
+                            Text("Try 10 Vodkas \(current_user.numDrinksArray[46])/10")
+                            .font(.system(size: 20))
+                            .font(.title).bold()
+                        }
+                        if toggle.tequila_toggle{
+                            Circle()
+                            .trim(from:0, to: CGFloat(current_user.numDrinksArray[51]) / 10)
+                            .stroke(Color.black, lineWidth: 20)
+                            .rotationEffect(.degrees(-90))
+                            .padding()
+                            .padding()
+                            Text("Try 10 Tequilas \(current_user.numDrinksArray[51])/10")
+                            .font(.system(size: 20))
+                            .font(.title).bold()
+                        }
+                        if toggle.specialty_toggle{
+                            Circle()
+                            .trim(from:0, to: CGFloat(current_user.numDrinksArray[58]) / 10)
+                            .stroke(Color.black, lineWidth: 20)
+                            .rotationEffect(.degrees(-90))
+                            .padding()
+                            .padding()
+                            Text("Try 10 Specialty Drinks \(current_user.numDrinksArray[58])/10")
+                            .font(.system(size: 20))
+                            .font(.title).bold()
                         }
           
                 }
@@ -171,7 +268,7 @@ struct ProfileView: View {
                     .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
                     .shadow(color: customRed.opacity(0.3), radius: 20, x: 0, y: 10)
                     .padding(10)
-                    .overlay(Text("Drink 10 \(alcohol_type) \(Int(value*10))/10").foregroundColor(.white)).font(.title2)
+                    // .overlay(Text("Drink 10 \(alcohol_type) \(current_user))/10").foregroundColor(.white)).font(.title2)
                    
                     }
                 

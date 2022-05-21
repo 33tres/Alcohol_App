@@ -26,6 +26,7 @@ struct Drink: Codable {
 
 struct User: Codable {
     let username: String
+    let email: String
     let ID: Int
     let numDrinksArray: [Int]
     let drinkIDsArray: [Int]
@@ -33,6 +34,7 @@ struct User: Codable {
 
     enum CodingKeys: String, CodingKey {
         case username
+        case email
         case ID
         case numDrinksArray = "num_drinks_array"
         case drinkIDsArray = "drink_IDs_array"
