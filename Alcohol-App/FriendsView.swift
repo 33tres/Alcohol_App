@@ -11,6 +11,9 @@ struct FriendsView: View {
     var drinksArray: [Drink] = Drink.allDrinks
     var usersArray: [User] = User.allUsers
     
+    @State var friend_leaderboard_popup = false
+    @State var friend_list_popup = false
+    
     let data = (1...50).map {
         "Friend \($0)" }
     let image =  Image(systemName: "person")
@@ -25,10 +28,15 @@ struct FriendsView: View {
 
     var body: some View {
         ScrollView {
-            
             VStack{
                 HStack{
+                    Button{
+                        friend_leaderboard_popup = true
+                    }label:{
                     ScrollView {
+                        
+                        
+                        // leaderboards
                         HStack{
                             Text("Leaderboards")
                                 .font(.system(size: 16))
@@ -67,13 +75,24 @@ struct FriendsView: View {
                         }
                     }
                     }
+                    .popover(isPresented: $friend_leaderboard_popup){
+                        Friend_Leaderboard()
+                    }
+                }
+                    
                     .frame(width: 150, height: 300)
                         .background(customgray)
                         .cornerRadius(20)
                         .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
                         .shadow(color: customgray.opacity(0.3), radius: 20, x: 0, y: 10)
                         .padding(10)
+                    
+                    
+                    // Friend List
                     HStack{
+                        Button{
+                            friend_list_popup = true
+                        }label:{
                         ScrollView {
                             HStack{
                                 Text("Friend List")
@@ -111,9 +130,11 @@ struct FriendsView: View {
                                     }
                                 }
                             }
+                            }
                         }
-                            
-                            
+                            .popover(isPresented: $friend_list_popup){
+                                Friend_List()
+                            }
                         }
                         .frame(width: 150, height: 300)
                             .background(customOlive)
@@ -123,6 +144,9 @@ struct FriendsView: View {
                             .padding(10)
                     }
                 }
+                
+                
+                // Friends recent badge
                 VStack{
                     Text("'Friend's recent badge")
                         .font(.system(size: 23))
@@ -161,6 +185,8 @@ struct FriendsView: View {
                 .shadow(color: customRed.opacity(0.3), radius: 20, x: 0, y: 10)
                 .padding(10)
                 
+                
+                // friend requests
                 VStack{
                     VStack{
                         ScrollView {

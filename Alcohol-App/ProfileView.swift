@@ -11,6 +11,10 @@ struct ProfileView: View {
     var drinksArray: [Drink] = Drink.allDrinks
     var current_user: User = User.allUsers[0]
     
+    @State var badge_display_popup = false
+    @State var all_badge_popup = false
+    @State var all_user_drinks_popup = false
+    
     @State var toggle = Toggle()
     @State var alcohol_type = "Drinks"
     var body: some View {
@@ -54,6 +58,9 @@ struct ProfileView: View {
                                     .shadow(radius: 20)
                                     .padding(5)
                                 }
+                                Button{
+                                    badge_display_popup = true
+                                }label:{
                                 VStack{
                                 Text("Badge Display")
                                     .font(.system(size: 15))
@@ -66,7 +73,11 @@ struct ProfileView: View {
                                     .cornerRadius(20)
                                     .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
                                     .shadow(color: customRed.opacity(0.3), radius: 20, x: 0, y: 10)
-                                } // vstack
+                                }// vstack
+                                }// label
+                                .popover(isPresented: $badge_display_popup){
+                                    Badge_Display()
+                                }
                             } //vstack
                         } // hstack
                     } // hstack
@@ -492,6 +503,12 @@ struct ProfileView: View {
                         .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
                         .shadow(color: customgray.opacity(0.3), radius: 20, x: 0, y: 10)
                         .padding(10)
+                
+                
+                // All Badges
+                Button{
+                    all_badge_popup = true
+                }label:{
                 VStack{
                     Text("All Badges")
                     .font(.system(size: 30))
@@ -506,6 +523,17 @@ struct ProfileView: View {
                 .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
                 .shadow(color: customOlive.opacity(0.3), radius: 20, x: 0, y: 10)
                 .padding(10)
+                }
+                .popover(isPresented: $all_badge_popup){
+                    All_Badges()
+                }
+                
+                
+                
+                // All Drinks
+                Button{
+                    all_user_drinks_popup = true
+                }label:{
                 VStack{
                     Text("All Drinks")
                     .font(.system(size: 30))
@@ -520,6 +548,10 @@ struct ProfileView: View {
                 .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
                 .shadow(color: customRed.opacity(0.3), radius: 20, x: 0, y: 10)
                 .padding(10)
+                }
+                .popover(isPresented: $all_user_drinks_popup){
+                    All_User_Drinks()
+                }
                     } // scroll view
                 .frame(maxWidth: .infinity)
                 .background(customGreen)

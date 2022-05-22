@@ -12,6 +12,11 @@ struct HomeView: View {
     var drinksArray: [Drink] = Drink.allDrinks
     var usersArray: [User] = User.allUsers
     
+    @State var drink_of_the_day_popup = false
+    @State var friend_leaderboard_popup = false
+    @State var recomended_drink_popup = false
+    @State var popular_drink_location_popup = false
+    
     @State private var region: MKCoordinateRegion =
     MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 40.75773, longitude: -75.985708), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
     
@@ -21,8 +26,13 @@ struct HomeView: View {
         let customgray = Color(red: 0.89, green: 0.87, blue: 0.71)
         let customOlive = Color(red: 0.81, green: 0.80, blue: 0.08)
         let customRed = Color(red: 0.71, green: 0.30, blue: 0.18)
-            ScrollView{
+        ScrollView{
+            
+            // Drink of the day
             VStack{
+                Button{
+                    drink_of_the_day_popup = true
+                } label:{
                 VStack{
                     Text("Drink of the Day")
                         .font(.system(size: 23))
@@ -53,15 +63,25 @@ struct HomeView: View {
                         .padding(10)
                 }
                 }
-                }
             }
+                .popover(isPresented: $drink_of_the_day_popup){
+                    Drink_of_the_Day()
+                }
+            } // label
+        }
             .frame(width: 350, height: 200)
             .background(customBrown)
             .cornerRadius(20)
             .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
             .shadow(color: customBrown.opacity(0.3), radius: 20, x: 0, y: 10)
             .padding(10)
+            
+            
+            // Friend Leaderboard
                 VStack{
+                    Button{
+                        friend_leaderboard_popup = true
+                    }label:{
                     VStack{
                         Text("Friend Leaderboard")
                             .font(.title).bold()
@@ -125,6 +145,10 @@ struct HomeView: View {
                             }
                         }
                     }
+                    }// label
+                    .popover(isPresented: $friend_leaderboard_popup){
+                        Friend_Leaderboard()
+                    }
                 }
                 .frame(width: 300, height: 400)
                 .background(customgray)
@@ -132,35 +156,58 @@ struct HomeView: View {
                 .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
                 .shadow(color: customgray.opacity(0.3), radius: 20, x: 0, y: 10)
                 .padding(10)
+            
+            
+            // Drink of the day
+            VStack{
+                Button{
+                    recomended_drink_popup = true
+                } label:{
                 VStack{
-                    Text("Recommended Drink")
+                    Text("Recomended Drink ")
                         .font(.system(size: 23))
                         .font(.title).bold()
                         .foregroundColor(.white)
                         .shadow(radius: 20)
                 HStack{
-                    Image(systemName: "bag.fill")
-                    .renderingMode(.original)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 75, height: 75)
-                    .padding(15)
+                    VStack{
+                        Text("\(drinksArray[2].name)")
+                            .font(.system(size: 23))
+                            .font(.title).bold()
+                            .foregroundColor(.white)
+                            .shadow(radius: 20)
+                            .padding(5)
+                        Image(systemName: "bag.fill")
+                        .renderingMode(.original)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 75, height: 75)
+                        .padding(15)
+                    }
                 HStack{
-                    Text("Quick reasoning on why we chose this alcohol for this person, it can be reasons like thay have chosen similar alcohols, or they dont like different")
+                    Text("\(drinksArray[2].description)")
                         .font(.system(size: 17))
                         .font(.title).bold()
                         .foregroundColor(.white)
                         .shadow(radius: 20)
-                        .padding(15)
+                        .padding(10)
                 }
                 }
+            }
+                .popover(isPresented: $recomended_drink_popup){
+                    Recommended_Drink()
                 }
-                .frame(width: 300, height: 250)
-                .background(customOlive)
-                .cornerRadius(20)
-                .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
-                .shadow(color: customOlive.opacity(0.3), radius: 20, x: 0, y: 10)
-                .padding(10)
+            } // label
+        }
+            .frame(width: 320, height: 220)
+            .background(customOlive)
+            .cornerRadius(20)
+            .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
+            .shadow(color: customOlive.opacity(0.3), radius: 20, x: 0, y: 10)
+            .padding(10)
+            
+            
+            // Closest Next Badge
                 VStack{
                     VStack{
                         Text("Closest Next Badge")
@@ -196,9 +243,15 @@ struct HomeView: View {
                 .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
                 .shadow(color: customRed.opacity(0.3), radius: 20, x: 0, y: 10)
                 .padding(10)
+            
+            
+                // Popular Drink in Location
+            Button{
+                popular_drink_location_popup = true
+            }label:{
                 VStack{
                     VStack{
-                        Text("Popular Beer in your location")
+                        Text("Popular Drink in your location")
                             .font(.system(size: 23))
                             .font(.title).bold()
                             .foregroundColor(.white)
@@ -215,6 +268,10 @@ struct HomeView: View {
                 .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
                 .shadow(color: customgray.opacity(0.3), radius: 20, x: 0, y: 10)
                 .padding(10)
+        }
+            .popover(isPresented: $popular_drink_location_popup){
+                Popular_Drink_Location_Popup()
+            }
         }
             .frame(maxWidth: .infinity)
             .background(customGreen)
