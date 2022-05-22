@@ -10,6 +10,7 @@ import SwiftUI
 struct Friend_Leaderboard: View {
     var body: some View {
         Text("Friend Leaderboard")
+        
     }
 }
 

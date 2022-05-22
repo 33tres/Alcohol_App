@@ -471,7 +471,6 @@ struct ProfileView: View {
                                         }
                                     }
                                     
-                                    
                                 }label:{
                                     Image(systemName: "person")
                                 }
