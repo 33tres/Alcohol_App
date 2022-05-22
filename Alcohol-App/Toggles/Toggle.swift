@@ -83,41 +83,41 @@ struct Toggle{
         every_toggle_false()
         whiskey_toggle = true
         drink_string = "Whiskeys"
-        drink_array_num = 19
+        drink_array_num = 17
     }
     
     mutating func toggle_gin(){
         every_toggle_false()
         gin_toggle = true
         drink_string = "Gins"
-        drink_array_num = 28
+        drink_array_num = 26
     }
     
     mutating func toggle_rum(){
         every_toggle_false()
         rum_toggle = true
         drink_string = "Rums"
-        drink_array_num = 33
+        drink_array_num = 31
     }
     
     mutating func toggle_vodka(){
         every_toggle_false()
         vodka_toggle = true
         drink_string = "Vodkas"
-        drink_array_num = 46
+        drink_array_num = 41
     }
     
     mutating func toggle_tequila(){
         every_toggle_false()
         tequila_toggle = true
         drink_string = "Tequilas"
-        drink_array_num = 51
+        drink_array_num = 46
     }
     
     mutating func toggle_specialty(){
         every_toggle_false()
         specialty_toggle = true
         drink_string = "Specialties"
-        drink_array_num = 58
+        drink_array_num = 52
     }
 }
