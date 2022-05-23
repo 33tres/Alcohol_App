@@ -9,11 +9,19 @@ import SwiftUI
 
 struct All_Badges: View {
     let customGreen = Color(red: 0.70, green: 0.81, blue: 0.67)
-    let customRed = Color(red: 0.71, green: 0.30, blue: 0.18)
+    let badgeCompleteColor = Color(red: 0.70, green: 1.0, blue: 0.67)
     let customOlive = Color(red: 0.81, green: 0.80, blue: 0.08)
     let customGrey = Color(red: 28, green: 28, blue: 28)
-    @State var badgeComplete = false
-    var body: some View {
+    let customRed = Color(red: 0.71, green: 0.30, blue: 0.18)
+    @State var beerBadgeComplete10 = true
+    @State var beerBadgeComplete25 = false
+    @State var beerBadgeComplete100 = false
+    @State var wineBadgeComplete10 = true
+    @State var wineBadgeComplete25 = true
+    @State var wineBadgeComplete100 = false
+    
+   
+        var body: some View {
         ScrollView{
         VStack{
             Text("All Badges")
@@ -21,54 +29,124 @@ struct All_Badges: View {
                 .font(.title).bold()
                 .foregroundColor(.white)
                 .shadow(radius: 20)
-                .padding(5)
+                .padding(10)
         }
         .frame(width: 200, height: 100)
         .background(customOlive)
             VStack{
                 HStack{
-                Circle()
-                        .frame(width: 50, height: 50)
-                        .padding(5)
-                    .background(customRed)
-                    Circle()
-                        .frame(width: 50, height: 50)
-                        .padding(5)
-                    .background(customGrey)
-                    Circle()
-                        .frame(width: 50, height: 50)
-                        .padding(5)
-                    .background(customRed)
-                    Circle()
-                        .frame(width: 50, height: 50)
-                        .padding(5)
-                    .background(customRed)
-                    Circle()
-                        .frame(width: 50, height: 50)
-                        .padding(5)
-                    .background(customRed)
-                    
+                    VStack{
+                    if(beerBadgeComplete10 == true){
+                        Circle()
+                                .frame(width: 40, height: 40)
+                                .padding(5)
+                                .background(badgeCompleteColor)
+                                
                         
+                    }else{
+                        Circle()
+                                .frame(width: 40, height: 40)
+                                .padding(5)
+                        .background(customGrey)
+                    }
+                    Text("Drink 10 beers")
+                           
+                            .foregroundColor(.white)
+                    }
+                   ///
+                    VStack{
+                    if(beerBadgeComplete25 == true){
+                        Circle()
+                                .frame(width: 40, height: 40)
+                                .padding(5)
+                                .background(badgeCompleteColor)
+                        
+                    }else{
+                        Circle()
+                                .frame(width: 40, height: 40)
+                                .padding(5)
+                        .background(customGrey)
+                    }
+                    Text("Drink 25 beers")
+                            .foregroundColor(.white)
+                    }
+                    VStack{
+                    if(beerBadgeComplete100 == true){
+                        Circle()
+                                .frame(width: 40, height: 40)
+                                .padding(5)
+                                .background(badgeCompleteColor)
+                        
+                    }else{
+                        Circle()
+                                .frame(width: 40, height: 40)
+                                .padding(5)
+                        .background(customGrey)
                     
-                  
+                    }
+                        Text("Drink 100 beers.")
+                            .foregroundColor(.white)
+                    }
                    
                 }
             }
-            HStack{
-                Circle()
-                    .frame(width: 50, height: 50)
-                    Circle()
-                        .frame(width: 50, height: 50)
-                    Circle()
-                        .frame(width: 50, height: 50)
-                    Circle()
-                        .frame(width: 50, height: 50)
-                    Circle()
-                        .frame(width: 50, height: 50)
-                    Circle()
-                        .frame(width: 50, height: 50)
+            VStack{
+                HStack{
+                    VStack{
+                    if(wineBadgeComplete10 == true){
+                        Circle()
+                                .frame(width: 40, height: 40)
+                                .padding(5)
+                                .background(badgeCompleteColor)
+                                
+                        
+                    }else{
+                        Circle()
+                                .frame(width: 40, height: 40)
+                                .padding(5)
+                        .background(customGrey)
+                    }
+                    Text("Drink 10 wines")
+                           
+                            .foregroundColor(.white)
+                    }
+                   ///
+                    VStack{
+                    if(wineBadgeComplete25 == true){
+                        Circle()
+                                .frame(width: 40, height: 40)
+                                .padding(5)
+                                .background(badgeCompleteColor)
+                        
+                    }else{
+                        Circle()
+                                .frame(width: 40, height: 40)
+                                .padding(5)
+                        .background(customGrey)
+                    }
+                    Text("Drink 25 wines")
+                            .foregroundColor(.white)
+                    }
+                    VStack{
+                    if(wineBadgeComplete100 == true){
+                        Circle()
+                                .frame(width: 40, height: 40)
+                                .padding(5)
+                                .background(badgeCompleteColor)
+                        
+                    }else{
+                        Circle()
+                                .frame(width: 40, height: 40)
+                                .padding(5)
+                        .background(customGrey)
+                    
+                    }
+                        Text("Drink 100 wines.")
+                            .foregroundColor(.white)
+                    }
+                   
+                }
             }
-        
         
         }
         .frame(maxWidth: .infinity)
