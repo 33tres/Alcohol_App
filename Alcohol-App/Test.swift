@@ -1,15 +1,19 @@
+//
+//  Test.swift
 //  Alcohol-App
 //
-//  Created by David Harrell on 5/15/22.
+//  Created by Samuel Harrell on 5/23/22.
 //
- 
+
 import SwiftUI
- 
-struct SearchView: View {
+
+
+struct Test: View {
+    
     var drinksArray: [Drink] = Drink.allDrinks
     var usersArray: [User] = User.allUsers
  
-    let drinks = ["Budweiser", "Angry Orchard", "More Alc Names", "Literally Feces"]
+   let drinks = ["Budweiser", "Angry Orchard", "More Alc Names", "Literally Feces"]
     
     @State private var searchText = ""
     var body: some View {
@@ -25,7 +29,8 @@ struct SearchView: View {
             .navigationTitle("Search for a Drink!")
         }
     }
- 
+    
+
 var results : [String] {
     if searchText.isEmpty{
         return drinks
@@ -34,9 +39,9 @@ var results : [String] {
     }
 }
 }
-struct SearchView_Previews: PreviewProvider {
+
+struct Test_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView()
+        Test()
     }
 }
-    

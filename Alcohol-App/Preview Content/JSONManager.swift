@@ -8,8 +8,11 @@
 import Foundation
 
 
-struct Drink: Codable {
-    let name, description, history, distilery: String
+struct Drink: Codable, Identifiable {
+    let name: String
+    let description: String
+    let history: String
+    let distilery: String
     let id: Int
 
     enum CodingKeys: String, CodingKey {
@@ -62,4 +65,5 @@ extension Bundle {
         
         return loadedData
     }
+    
 }
