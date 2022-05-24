@@ -22,7 +22,7 @@ struct HomeView: View {
     
     var body: some View {
         let customGreen = Color(red: 0.70, green: 0.81, blue: 0.67)
-        let customBrown = Color(red: 0.85, green: 0.66, blue: 0.41)
+       // let customBrown = Color(red: 0.85, green: 0.66, blue: 0.41)
         let customgray = Color(red: 0.89, green: 0.87, blue: 0.71)
         let customOlive = Color(red: 0.81, green: 0.80, blue: 0.08)
         let customRed = Color(red: 0.71, green: 0.30, blue: 0.18)
@@ -37,28 +37,27 @@ struct HomeView: View {
                     Text("Drink of the Day")
                         .font(.system(size: 23))
                         .font(.title).bold()
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .shadow(radius: 20)
                 HStack{
                     VStack{
-                        Text("\(drinksArray[2].name)")
+                        Text("\(drinksArray[0].name)")
                             .font(.system(size: 23))
                             .font(.title).bold()
-                            .foregroundColor(.white)
+                            .foregroundColor(.black)
                             .shadow(radius: 20)
                             .padding(5)
-                        Image(systemName: "bag.fill")
+                        Image("Bud-Light")
                         .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 75, height: 75)
-                        .padding(15)
+                        .frame(width: 100, height: 100)
                     }
                 HStack{
-                    Text("\(drinksArray[2].description)")
-                        .font(.system(size: 17))
+                    Text("\(drinksArray[0].description)")
+                        .font(.system(size: 12))
                         .font(.title).bold()
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .shadow(radius: 20)
                         .padding(10)
                 }
@@ -70,10 +69,10 @@ struct HomeView: View {
             } // label
         }
             .frame(width: 350, height: 200)
-            .background(customBrown)
+            .background(.white)
             .cornerRadius(20)
             .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
-            .shadow(color: customBrown.opacity(0.3), radius: 20, x: 0, y: 10)
+            .shadow(color: .white.opacity(0.3), radius: 20, x: 0, y: 10)
             .padding(10)
             
             
@@ -164,31 +163,31 @@ struct HomeView: View {
                     recomended_drink_popup = true
                 } label:{
                 VStack{
-                    Text("Recomended Drink ")
+                    Text("Recomended Drink")
                         .font(.system(size: 23))
                         .font(.title).bold()
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .shadow(radius: 20)
                 HStack{
                     VStack{
-                        Text("\(drinksArray[2].name)")
+                        Text("\(drinksArray[1].name)")
                             .font(.system(size: 23))
                             .font(.title).bold()
-                            .foregroundColor(.white)
+                            .foregroundColor(.black)
                             .shadow(radius: 20)
                             .padding(5)
-                        Image(systemName: "bag.fill")
+                        Image("Apothic-Red")
                         .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 75, height: 75)
+                        .frame(width: 100, height: 100)
                         .padding(15)
                     }
                 HStack{
-                    Text("\(drinksArray[2].description)")
-                        .font(.system(size: 17))
+                    Text("\(drinksArray[1].description)")
+                        .font(.system(size: 12))
                         .font(.title).bold()
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .shadow(radius: 20)
                         .padding(10)
                 }
@@ -200,10 +199,10 @@ struct HomeView: View {
             } // label
         }
             .frame(width: 320, height: 220)
-            .background(customOlive)
+            .background(.white)
             .cornerRadius(20)
             .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
-            .shadow(color: customOlive.opacity(0.3), radius: 20, x: 0, y: 10)
+            .shadow(color: .white.opacity(0.3), radius: 20, x: 0, y: 10)
             .padding(10)
             
             
@@ -263,10 +262,10 @@ struct HomeView: View {
                     .padding(10)
                 }
                 .frame(width: 330, height: 300)
-                .background(customgray)
+                .background(customOlive)
                 .cornerRadius(20)
-                .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
-                .shadow(color: customgray.opacity(0.3), radius: 20, x: 0, y: 10)
+                .shadow(color: customOlive.opacity(0.2), radius: 5, x: 0, y: 2)
+                .shadow(color: customOlive.opacity(0.3), radius: 20, x: 0, y: 10)
                 .padding(10)
         }
             .popover(isPresented: $popular_drink_location_popup){

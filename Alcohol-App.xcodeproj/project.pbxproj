@@ -193,8 +193,8 @@
 				DD623749283AA525004BB384 /* Friend_View_Popups */,
 				DD62374E283AA5B8004BB384 /* Profile_View_Popups */,
 				DD6237382839403B004BB384 /* Toggles */,
-				F9C98FE42831766B00EA80BB /* Assets.xcassets */,
 				F9C98FE62831766B00EA80BB /* Preview Content */,
+				F9C98FE42831766B00EA80BB /* Assets.xcassets */,
 			);
 			path = "Alcohol-App";
 			sourceTree = "<group>";
