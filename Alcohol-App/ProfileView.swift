@@ -289,37 +289,61 @@ struct ProfileView: View {
                                         }
                                         Button{
                                             toggle.drink_string = "Blended Whiskeys"
-                                            toggle.drink_array_num = 26
+                                            toggle.drink_array_num = 25
                                         }label:{
                                             Text("Blended Whiskey")
+                                        }
+                                        Button{
+                                            toggle.drink_string = "Flavored Whiskeys"
+                                            toggle.drink_array_num = 26
+                                        }label:{
+                                            Text("Flavored Whiskey")
+                                        }
+                                        Button{
+                                            toggle.drink_string = "Single Malt Whiskeys"
+                                            toggle.drink_array_num = 27
+                                        }label:{
+                                            Text("Single Malt Whiskey")
                                         }
                                     }
                                     // Gin Toggles
                                     
                                     if toggle.gin_toggle{
                                         Button{
-                                            toggle.drink_string = "London Drys"
-                                            toggle.drink_array_num = 27
+                                            toggle.drink_string = "London Dry Gins"
+                                            toggle.drink_array_num = 29
                                         }label:{
                                             Text("London Dry")
                                         }
                                         Button{
-                                            toggle.drink_string = "Plymouths"
-                                            toggle.drink_array_num = 28
+                                            toggle.drink_string = "Moderns Gins"
+                                            toggle.drink_array_num = 30
                                         }label:{
-                                            Text("Plymouth")
+                                            Text("Modern")
                                         }
                                         Button{
-                                            toggle.drink_string = "Old Toms"
-                                            toggle.drink_array_num = 29
+                                            toggle.drink_string = "Old Tom Gins"
+                                            toggle.drink_array_num = 31
                                         }label:{
                                             Text("Old Tom")
                                         }
                                         Button{
                                             toggle.drink_string = "Genevers"
-                                            toggle.drink_array_num = 30
+                                            toggle.drink_array_num = 32
                                         }label:{
                                             Text("Genever")
+                                        }
+                                        Button{
+                                            toggle.drink_string = "Aged Gins"
+                                            toggle.drink_array_num = 33
+                                        }label:{
+                                            Text("Aged")
+                                        }
+                                        Button{
+                                            toggle.drink_string = "Navy Strength Gins"
+                                            toggle.drink_array_num = 34
+                                        }label:{
+                                            Text("Navy Strength")
                                         }
                                     }
                                     // Rum Toggles
@@ -327,68 +351,44 @@ struct ProfileView: View {
                                     if toggle.rum_toggle{
                                         Button{
                                             toggle.drink_string = "White Rums"
-                                            toggle.drink_array_num = 32
+                                            toggle.drink_array_num = 36
                                         }label:{
                                             Text("White Rum")
                                         }
                                         Button{
-                                            toggle.drink_string = "Gold or Pale Rums"
-                                            toggle.drink_array_num = 33
+                                            toggle.drink_string = "Gold Rums"
+                                            toggle.drink_array_num = 37
                                         }label:{
-                                            Text("Gold or Pale Rum")
+                                            Text("Gold Rum")
                                         }
                                         Button{
                                             toggle.drink_string = "Dark Rums"
-                                            toggle.drink_array_num = 34
+                                            toggle.drink_array_num = 38
                                         }label:{
                                             Text("Dark Rum")
                                         }
                                         Button{
-                                            toggle.drink_string = "Black Rums"
-                                            toggle.drink_array_num = 35
-                                        }label:{
-                                            Text("Black Rum")
-                                        }
-                                        Button{
-                                            toggle.drink_string = "Navy Rums"
-                                            toggle.drink_array_num = 36
-                                        }label:{
-                                            Text("Navy Rum")
-                                        }
-                                        Button{
-                                            toggle.drink_string = "Cachaças"
-                                            toggle.drink_array_num = 37
-                                        }label:{
-                                            Text("Cachaça")
-                                        }
-                                        Button{
-                                            toggle.drink_string = "Aguardiente"
-                                            toggle.drink_array_num = 38
-                                        }label:{
-                                            Text("Aguardiente")
-                                        }
-                                        Button{
-                                            toggle.drink_string = "Flavored and Spiced Rums"
+                                            toggle.drink_string = "Aged Rums"
                                             toggle.drink_array_num = 39
                                         }label:{
-                                            Text("Flavored and Spiced")
+                                            Text("Aged Rum")
                                         }
                                         Button{
-                                            toggle.drink_string = "Other"
+                                            toggle.drink_string = "Spiced Rums"
                                             toggle.drink_array_num = 40
                                         }label:{
-                                            Text("Other")
+                                            Text("Spiced Rum")
+                                        }
+                                        Button{
+                                            toggle.drink_string = "Flavored Rums"
+                                            toggle.drink_array_num = 41
+                                        }label:{
+                                            Text("Flavored Rums")
                                         }
                                     }
                                     // Vodka Toggles
                                     
                                     if toggle.vodka_toggle{
-                                        Button{
-                                            toggle.drink_string = "Plain Vodkas"
-                                            toggle.drink_array_num = 42
-                                        }label:{
-                                            Text("Plain Vodka")
-                                        }
                                         Button{
                                             toggle.drink_string = "Flavored Vodkas"
                                             toggle.drink_array_num = 43
@@ -396,16 +396,16 @@ struct ProfileView: View {
                                             Text("Flavored Vodka")
                                         }
                                         Button{
-                                            toggle.drink_string = "Fruit Vodkas"
+                                            toggle.drink_string = "Organic Vodkas"
                                             toggle.drink_array_num = 44
                                         }label:{
-                                            Text("Fruit Vodka")
+                                            Text("Organic Vodka")
                                         }
                                         Button{
-                                            toggle.drink_string = "Grain Vodkas"
+                                            toggle.drink_string = "Kosher Vodkas"
                                             toggle.drink_array_num = 45
                                         }label:{
-                                            Text("Grain Vodka")
+                                            Text("Kosher Vodka")
                                         }
                                     }
                                     // Tequila Toggles
@@ -424,22 +424,28 @@ struct ProfileView: View {
                                             Text("Reposado")
                                         }
                                         Button{
-                                            toggle.drink_string = "Jovens"
-                                            toggle.drink_array_num = 49
-                                        }label:{
-                                            Text("Joven")
-                                        }
-                                        Button{
                                             toggle.drink_string = "Añejos"
-                                            toggle.drink_array_num = 50
+                                            toggle.drink_array_num = 49
                                         }label:{
                                             Text("Añejo")
                                         }
                                         Button{
-                                            toggle.drink_string = "Mixtos"
+                                            toggle.drink_string = "Mezcals"
+                                            toggle.drink_array_num = 50
+                                        }label:{
+                                            Text("Mezcal")
+                                        }
+                                        Button{
+                                            toggle.drink_string = "Gold Tequilas"
                                             toggle.drink_array_num = 51
                                         }label:{
-                                            Text("Mixto")
+                                            Text("Gold Tequila")
+                                        }
+                                        Button{
+                                            toggle.drink_string = "Flavored Tequilas"
+                                            toggle.drink_array_num = 52
+                                        }label:{
+                                            Text("Flavored Tequila")
                                         }
                                     }
                                     // Specialty Toggles
@@ -447,25 +453,31 @@ struct ProfileView: View {
                                     if toggle.specialty_toggle{
                                         Button{
                                             toggle.drink_string = "Meads"
-                                            toggle.drink_array_num = 53
+                                            toggle.drink_array_num = 54
                                         }label:{
                                             Text("Mead")
                                         }
                                         Button{
                                             toggle.drink_string = "Sakes"
-                                            toggle.drink_array_num = 54
+                                            toggle.drink_array_num = 55
                                         }label:{
                                             Text("Sake")
                                         }
                                         Button{
                                             toggle.drink_string = "Brandys"
-                                            toggle.drink_array_num = 55
+                                            toggle.drink_array_num = 56
                                         }label:{
                                             Text("Brandy")
                                         }
                                         Button{
-                                            toggle.drink_string = "Other"
-                                            toggle.drink_array_num = 56
+                                            toggle.drink_string = "Liqueurs"
+                                            toggle.drink_array_num = 57
+                                        }label:{
+                                            Text("Liqueur")
+                                        }
+                                        Button{
+                                            toggle.drink_string = "Others"
+                                            toggle.drink_array_num = 58
                                         }label:{
                                             Text("Other")
                                         }
