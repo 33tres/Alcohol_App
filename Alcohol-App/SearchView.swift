@@ -22,7 +22,7 @@ struct SearchView: View {
                 }
             }
             .searchable(text: $searchText)
-            .navigationTitle("")
+            .navigationTitle("Search for a Drink!")
         }
     }
  
@@ -39,9 +39,4 @@ struct SearchView_Previews: PreviewProvider {
         SearchView()
     }
 }
-    
-
-    
-
-    
     

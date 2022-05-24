@@ -11,12 +11,14 @@ import Foundation
 struct Drink: Codable, Identifiable {
     let name: String
     let description: String
+    let history: String
     let distilery: String
     let id: Int
 
     enum CodingKeys: String, CodingKey {
         case name
         case description = "description"
+        case history
         case distilery
         case id = "ID"
     }
