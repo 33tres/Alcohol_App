@@ -64,7 +64,7 @@ struct HomeView: View {
                 }
             }
                 .popover(isPresented: $drink_of_the_day_popup){
-                    Drink_of_the_Day()
+                    Drink_View()
                 }
             } // label
         }
@@ -194,7 +194,7 @@ struct HomeView: View {
                 }
             }
                 .popover(isPresented: $recomended_drink_popup){
-                    Recommended_Drink()
+                    Drink_View()
                 }
             } // label
         }
