@@ -9,7 +9,7 @@ import Foundation
 
 
 struct Drink: Codable, Identifiable {
-    let name: String
+    var name: String
     let description: String
     let abv: Float
     let brand: String
@@ -25,6 +25,7 @@ struct Drink: Codable, Identifiable {
     
     static let allDrinks: [Drink] = Bundle.main.decode(file: "Drinks.json")
     static let sampleDrink: Drink = allDrinks[0]
+  
 }
 
 struct User: Codable {
