@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     var drinksArray: [Drink] = Drink.allDrinks
-    var current_user: User = User.allUsers[0]
+    var currentUser: User
     
     @State var badge_display_popup = false
     @State var all_badge_popup = false
@@ -44,14 +44,14 @@ struct ProfileView: View {
                         .padding(.trailing)
                         HStack{
                             VStack{
-                                Text("\(current_user.username)")
+                                Text("\(currentUser.username)")
                                 .font(.system(size: 15))
                                 .font(.title).bold()
                                 .foregroundColor(.white)
                                 .shadow(radius: 20)
                                 .padding(5)
                                 VStack{
-                                    Text("\(current_user.email)")
+                                    Text("\(currentUser.email)")
                                     .font(.system(size: 15))
                                     .font(.title).bold()
                                     .foregroundColor(.white)
@@ -496,12 +496,12 @@ struct ProfileView: View {
                         .padding()
                         .padding()
                         Circle()
-                            .trim(from:0, to: CGFloat(current_user.numDrinksArray[toggle.drink_array_num]) / 10)
+                            .trim(from:0, to: CGFloat(currentUser.numDrinksArray[toggle.drink_array_num]) / 10)
                         .stroke(Color.black, lineWidth: 20)
                         .rotationEffect(.degrees(-90))
                         .padding()
                         .padding()
-                        Text("Try 10 \(toggle.drink_string) \(current_user.numDrinksArray[toggle.drink_array_num])/10")
+                        Text("Try 10 \(toggle.drink_string) \(currentUser.numDrinksArray[toggle.drink_array_num])/10")
                             .font(.system(size: 20))
                             .font(.title).bold()
                             .foregroundColor(.black)
@@ -576,7 +576,20 @@ struct ProfileView: View {
 
 
 struct ProfileView_Previews: PreviewProvider {
+    static let tempUser = User(
+        username: "bctwohander",
+        email: "bctwohander@gmail.com",
+        ID: 100000000,
+        numDrinksArray: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0],
+        drinkIDsArray: [],
+        friendIDsArray: [100000001, 100000002]
+        )
     static var previews: some View {
-        ProfileView()
+        ProfileView(currentUser: tempUser)
     }
 }

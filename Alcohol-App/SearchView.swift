@@ -7,7 +7,7 @@ import SwiftUI
  
 struct SearchView: View {
     var drinksArray: [Drink] = Drink.allDrinks
-    var usersArray: [User] = User.allUsers
+    var currentUser: User
  
     let drinks = ["Budweiser", "Angry Orchard", "More Alc Names", "Literally Feces"]
     
@@ -35,8 +35,21 @@ var results : [String] {
 }
 }
 struct SearchView_Previews: PreviewProvider {
+    static let tempUser = User(
+        username: "bctwohander",
+        email: "bctwohander@gmail.com",
+        ID: 100000000,
+        numDrinksArray: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0],
+        drinkIDsArray: [],
+        friendIDsArray: [100000001, 100000002]
+        )
     static var previews: some View {
-        SearchView()
+        SearchView(currentUser: tempUser)
     }
 }
     

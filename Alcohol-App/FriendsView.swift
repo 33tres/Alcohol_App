@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FriendsView: View {
     var drinksArray: [Drink] = Drink.allDrinks
-    var usersArray: [User] = User.allUsers
+    var currentUser: User
     
     @State var friend_leaderboard_popup = false
     @State var friend_list_popup = false
@@ -238,7 +238,20 @@ struct FriendsView: View {
 
 
 struct FriendsView_Previews: PreviewProvider {
+    static let tempUser = User(
+        username: "bctwohander",
+        email: "bctwohander@gmail.com",
+        ID: 100000000,
+        numDrinksArray: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0],
+        drinkIDsArray: [],
+        friendIDsArray: [100000001, 100000002]
+        )
     static var previews: some View {
-        FriendsView()
+        FriendsView(currentUser: tempUser)
     }
 }

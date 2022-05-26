@@ -9,13 +9,14 @@ import SwiftUI
 import MapKit
 
 struct HomeView: View {
-    var drinksArray: [Drink] = Drink.allDrinks
-    var usersArray: [User] = User.allUsers
     
     @State var drink_of_the_day_popup = false
     @State var friend_leaderboard_popup = false
     @State var recomended_drink_popup = false
     @State var popular_drink_location_popup = false
+    var currentUser: User
+    var drinksArray: [Drink] = Drink.allDrinks
+    var usersArray: [User] = User.allUsers
     
     @State private var region: MKCoordinateRegion =
     MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 40.75773, longitude: -75.985708), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
@@ -82,71 +83,21 @@ struct HomeView: View {
                         friend_leaderboard_popup = true
                     }label:{
                     VStack{
+                        ScrollView{
                         Text("Friend Leaderboard")
                             .font(.title).bold()
                             .foregroundColor(.white)
                             .shadow(radius: 20)
                             .padding(15)
-                        HStack{
-                            Image(systemName: "person.fill")
-                            .renderingMode(.original)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 40, height: 40)
-                            HStack{
-                                Text("\(usersArray[0].username)")
-                                    .font(.title).bold()
-                                    .foregroundColor(.white)
-                                    .shadow(radius: 20)
-                                    .padding(20)
-                            }
-                        }
-                        HStack{
-                            Image(systemName: "person.fill")
-                            .renderingMode(.original)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 40, height: 40)
-                            HStack{
-                                Text("\(usersArray[1].username)")
-                                    .font(.title).bold()
-                                    .foregroundColor(.white)
-                                    .shadow(radius: 20)
-                                    .padding(20)
-                            }
-                        }
-                        HStack{
-                            Image(systemName: "person.fill")
-                            .renderingMode(.original)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 40, height: 40)
-                            HStack{
-                                Text("\(usersArray[2].username)")
-                                    .font(.title).bold()
-                                    .foregroundColor(.white)
-                                    .shadow(radius: 20)
-                                    .padding(20)
-                            }
-                        }
-                        HStack{
-                            Image(systemName: "person.fill")
-                            .renderingMode(.original)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 40, height: 40)
-                            HStack{
-                                Text("Friend 4")
-                                    .font(.title).bold()
-                                    .foregroundColor(.white)
-                                    .shadow(radius: 20)
-                                    .padding(20)
-                            }
+                        Spacer()
+                        VStack{
+                            Text("Placeholder")
                         }
                     }
                     }// label
                     .popover(isPresented: $friend_leaderboard_popup){
                         Friend_Leaderboard()
+                    }
                     }
                 }
                 .frame(width: 300, height: 400)
@@ -277,8 +228,22 @@ struct HomeView: View {
     }
 }
 
+
 struct HomeView_Previews: PreviewProvider {
+    static let tempUser = User(
+        username: "bctwohander",
+        email: "bctwohander@gmail.com",
+        ID: 0,
+        numDrinksArray: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0],
+        drinkIDsArray: [],
+        friendIDsArray: [0, 1, 2]
+        )
     static var previews: some View {
-        HomeView()
+        HomeView(currentUser: tempUser)
     }
 }

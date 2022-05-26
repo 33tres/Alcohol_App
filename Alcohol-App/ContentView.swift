@@ -8,21 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    var drinksArray: [Drink] = Drink.allDrinks
+    var current_User = User.allUsers[0]
+        
     var body: some View {
         TabView{
-            HomeView()
+            HomeView(currentUser: current_User)
                 .tabItem(){
                     Image(systemName: "house")
                 }
-            SearchView()
+            SearchView(currentUser: current_User)
                 .tabItem(){
                     Image(systemName: "magnifyingglass")
                 }
-            FriendsView()
+            FriendsView(currentUser: current_User)
                 .tabItem(){
                     Image(systemName: "person.3")
                 }
-            ProfileView()
+            ProfileView(currentUser: current_User)
                 .tabItem(){
                     Image(systemName: "person.circle")
                     
