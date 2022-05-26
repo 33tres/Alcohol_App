@@ -180,11 +180,11 @@
 			children = (
 				F9C98FE02831766900EA80BB /* Alcohol_AppApp.swift */,
 				F9C98FE22831766900EA80BB /* ContentView.swift */,
-				F9A8167B283BB28C00A909A2 /* Test.swift */,
 				DD96F80C2831D58000815FC7 /* HomeView.swift */,
 				DDB4DFF928318B1D00B894EE /* SearchView.swift */,
 				DD96F80E2831D5EA00815FC7 /* FriendsView.swift */,
 				F90AFD8928319A0E00A4D5EA /* ProfileView.swift */,
+				F9A8167B283BB28C00A909A2 /* Test.swift */,
 				DD623744283AA47F004BB384 /* Multi_View_Popups */,
 				DD62373B283AA163004BB384 /* Home_Page_Popups */,
 				DD623749283AA525004BB384 /* Friend_View_Popups */,

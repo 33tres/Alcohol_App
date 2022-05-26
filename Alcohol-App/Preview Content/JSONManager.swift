@@ -10,6 +10,7 @@ import Foundation
 
 struct Drink: Codable, Identifiable {
     let name: String
+    let category: String
     let description: String
     let abv: Float
     let brand: String
@@ -17,6 +18,7 @@ struct Drink: Codable, Identifiable {
 
     enum CodingKeys: String, CodingKey {
         case name
+        case category
         case description = "description"
         case abv
         case brand

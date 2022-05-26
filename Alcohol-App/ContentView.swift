@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     var drinksArray: [Drink] = Drink.allDrinks
-    var current_User = User.allUsers[0]
+    var usersArray: [User] = User.allUsers
+    var current_User = User.allUsers[1]
         
     var body: some View {
         TabView{

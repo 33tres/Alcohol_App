@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FriendsView: View {
     var drinksArray: [Drink] = Drink.allDrinks
+    var usersArray: [User] = User.allUsers
     var currentUser: User
     
     @State var friend_leaderboard_popup = false
@@ -37,46 +38,42 @@ struct FriendsView: View {
                         
                         
                         // leaderboards
-                        HStack{
                             Text("Leaderboards")
                                 .font(.system(size: 16))
                                 .font(.title).bold()
-                                .foregroundColor(.white)
+                                .foregroundColor(.black)
                                 .padding(.top)
-                                .padding(.bottom)
-
-                            HStack{
-                                Image(systemName: "bag.fill")
-                                    .padding(.top)
-                                    .padding(.bottom)
-                            }
-                        }
-                            
-                            
-                        LazyVGrid(columns: columns, spacing: 30) {
-                            
-                                
-                        
-                        ForEach(data, id: \.self) { item in
-                            HStack{
-                                Image(systemName: "person")
-                                    .resizable()
-                                    .frame(width: 30, height: 30)
-                                    .aspectRatio(contentMode:.fit)
-                                    .foregroundColor(.white)
+                        Divider()
+                        VStack{
+                            ForEach(currentUser.friendIDsArray, id: \.self){ value in
                                 HStack{
-                                    Text(item)
-                                        .font(.system(size: 15))
+                                    Image(systemName: "person")
+                                        .resizable()
+                                        .frame(width: 25, height: 25)
+                                        .aspectRatio(contentMode:.fit)
+                                        .foregroundColor(.black)
+                                        .padding(.leading)
+                                    Text("\(usersArray[value].username)")
+                                        .font(.system(size: 8))
                                         .font(.title).bold()
-                                        .foregroundColor(.white)
+                                        .foregroundColor(.black)
                                         .shadow(radius: 20)
+                                    Spacer()
+                                    HStack{
+                                        Text("\(usersArray[value].numDrinksArray[0])")
+                                            .font(.system(size: 10))
+                                            .font(.title).bold()
+                                            .foregroundColor(.black)
+                                            .shadow(radius: 20)
+                                            .padding(.trailing, 7)
+                                    }
                                 }
+                                Divider()
                             }
                         }
-                    }
                     }
                     .popover(isPresented: $friend_leaderboard_popup){
-                        Friend_Leaderboard()
+                        Friend_Leaderboard(current_User: currentUser)
                     }
                 }
                     
@@ -103,37 +100,38 @@ struct FriendsView: View {
                                     .padding(.bottom)
 
                                 HStack{
+                                    Button{
+                                        
+                                    }label:{
                                     Image(systemName: "plus")
                                         .padding(.top)
                                         .padding(.bottom)
-                                }
-                            }
-                                
-                                
-                            LazyVGrid(columns: columns, spacing: 30) {
-                                
-                                    
-                            
-                            ForEach(data, id: \.self) { item in
-                                HStack{
-                                    Image(systemName: "person")
-                                        .resizable()
-                                        .frame(width: 30, height: 30)
-                                        .aspectRatio(contentMode:.fit)
-                                        .foregroundColor(.white)
-                                    HStack{
-                                        Text(item)
-                                            .font(.system(size: 15))
-                                            .font(.title).bold()
-                                            .foregroundColor(.white)
-                                            .shadow(radius: 20)
                                     }
                                 }
                             }
+                            VStack{
+                                ForEach(currentUser.friendIDsArray, id: \.self){ value in
+                                    HStack{
+                                        Image(systemName: "person")
+                                            .resizable()
+                                            .frame(width: 25, height: 25)
+                                            .aspectRatio(contentMode:.fit)
+                                            .foregroundColor(.black)
+                                            .padding(.leading)
+                                        Text("\(usersArray[value].username)")
+                                            .font(.system(size: 8))
+                                            .font(.title).bold()
+                                            .foregroundColor(.black)
+                                            .shadow(radius: 20)
+                                        Spacer()
+                                    }
+                                    Divider()
+                                }
                             }
+
                         }
                             .popover(isPresented: $friend_list_popup){
-                                Friend_List()
+                                Friend_List(current_User: currentUser)
                             }
                         }
                         .frame(width: 150, height: 300)
@@ -241,7 +239,7 @@ struct FriendsView_Previews: PreviewProvider {
     static let tempUser = User(
         username: "bctwohander",
         email: "bctwohander@gmail.com",
-        ID: 100000000,
+        ID: 0,
         numDrinksArray: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                          0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                          0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -249,7 +247,7 @@ struct FriendsView_Previews: PreviewProvider {
                          0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                          0, 0, 0, 0, 0, 0, 0, 0, 0],
         drinkIDsArray: [],
-        friendIDsArray: [100000001, 100000002]
+        friendIDsArray: [0, 1, 2]
         )
     static var previews: some View {
         FriendsView(currentUser: tempUser)

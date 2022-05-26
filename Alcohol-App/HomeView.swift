@@ -48,7 +48,7 @@ struct HomeView: View {
                             .foregroundColor(.black)
                             .shadow(radius: 20)
                             .padding(5)
-                        Image("Bud-Light")
+                        Image("\(drinksArray[0].name)")
                         .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -65,7 +65,7 @@ struct HomeView: View {
                 }
             }
                 .popover(isPresented: $drink_of_the_day_popup){
-                    Drink_View()
+                    Drink_View(current_Drink: drinksArray[0], current_User: currentUser)
                 }
             } // label
         }
@@ -86,17 +86,45 @@ struct HomeView: View {
                         ScrollView{
                         Text("Friend Leaderboard")
                             .font(.title).bold()
-                            .foregroundColor(.white)
+                            .foregroundColor(.black)
                             .shadow(radius: 20)
                             .padding(15)
+                            Divider()
                         Spacer()
                         VStack{
-                            Text("Placeholder")
+                            ForEach(currentUser.friendIDsArray, id: \.self){ value in
+                                HStack{
+                                    Image(systemName: "person")
+                                        .resizable()
+                                        .frame(width: 40, height: 40)
+                                        .aspectRatio(contentMode:.fit)
+                                        .foregroundColor(.black)
+                                        .padding(.leading)
+                                    Spacer()
+                                    HStack{
+                                        Text("\(usersArray[value].username)")
+                                            .font(.system(size: 22))
+                                            .font(.title).bold()
+                                            .foregroundColor(.black)
+                                            .shadow(radius: 20)
+                                        Spacer()
+                                        HStack{
+                                            Text("\(usersArray[value].numDrinksArray[0])")
+                                                .font(.system(size: 22))
+                                                .font(.title).bold()
+                                                .foregroundColor(.black)
+                                                .shadow(radius: 20)
+                                        }
+                                    }
+                                    Spacer()
+                                }
+                                Divider()
+                            }
                         }
                     }
                     }// label
                     .popover(isPresented: $friend_leaderboard_popup){
-                        Friend_Leaderboard()
+                        Friend_Leaderboard(current_User: currentUser)
                     }
                     }
                 }
@@ -127,7 +155,7 @@ struct HomeView: View {
                             .foregroundColor(.black)
                             .shadow(radius: 20)
                             .padding(5)
-                        Image("Apothic-Red")
+                        Image("\(drinksArray[1].name)")
                         .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -145,7 +173,7 @@ struct HomeView: View {
                 }
             }
                 .popover(isPresented: $recomended_drink_popup){
-                    Drink_View()
+                    Drink_View(current_Drink: drinksArray[1], current_User: currentUser)
                 }
             } // label
         }

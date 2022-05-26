@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct Drink_View: View {
-    var drinksArray: [Drink] = Drink.allDrinks
-    var usersArray: [User] = User.allUsers
+    var current_Drink: Drink
+    var current_User: User
     
     let customgray = Color(red: 0.85, green: 0.85, blue: 0.85)
     let customGreen = Color(red: 0.70, green: 0.81, blue: 0.67)
@@ -18,7 +18,7 @@ struct Drink_View: View {
         ScrollView{
             ZStack{
         VStack{
-            Text("\(drinksArray[0].name)")
+            Text("\(current_Drink.name)")
             .font(.system(size: 30))
             .font(.title).bold()
             .padding(.top)
@@ -28,7 +28,7 @@ struct Drink_View: View {
             VStack{
                 HStack{
                     Spacer()
-                    Image("Bud-Light")
+                    Image("\(current_Drink.name)")
                     .renderingMode(.original)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -41,7 +41,7 @@ struct Drink_View: View {
                             Text("Brand: ")
                                 .padding()
                                 .foregroundColor(.black)
-                            Text("\(drinksArray[0].brand)")
+                            Text("\(current_Drink.brand)")
                             .foregroundColor(.black)
                             Spacer()
                         }
@@ -50,7 +50,7 @@ struct Drink_View: View {
                             Text("Catigory: ")
                                 .foregroundColor(.black)
                                 .padding()
-                            Text("Lager")
+                            Text("\(current_Drink.category)")
                                 .foregroundColor(.black)
                             Spacer()
                         }
@@ -58,7 +58,8 @@ struct Drink_View: View {
                             Text("ABV:")
                             .foregroundColor(.black)
                             .padding()
-                            Text("4.2")
+                            let rounded_abv = String(format: "%.1f", current_Drink.abv)
+                            Text("\(rounded_abv)")
                             .foregroundColor(.black)
                             Spacer()
                             }
@@ -66,7 +67,7 @@ struct Drink_View: View {
                         }
                     }
                 }
-                Text("\(drinksArray[0].description)")
+                Text("\(current_Drink.description)")
                 .font(.system(size: 15))
                 .font(.title).bold()
                 .foregroundColor(.black)
@@ -119,7 +120,29 @@ struct Drink_View: View {
 }
 
 struct Drink_View_Previews: PreviewProvider {
+    static let tempDrink = Drink(
+    name: "Bud Light",
+    category: "Lager",
+    description: "Introduced in 1982, Bud Light is a premium light lager with a superior drinkability that has made it the best-selling and most popular beer in the United States. Bud Light is brewed using a blend of premium aroma hop varieties, both American-grown and imported, and a combination of barley malts and rice. The light-bodied beer features a fresh, clean and subtle hop aroma, delicate malt sweetness and a crisp finish that delivers the ultimate refreshment.",
+    abv: 4.2,
+    brand: "Bud Light",
+    id: 1118400000
+    )
+    static let tempUser = User(
+        username: "bctwohander",
+        email: "bctwohander@gmail.com",
+        ID: 0,
+        numDrinksArray: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0],
+        drinkIDsArray: [],
+        friendIDsArray: [0, 1, 2]
+        )
+    
     static var previews: some View {
-        Drink_View()
+        Drink_View(current_Drink: tempDrink, current_User: tempUser)
     }
 }
