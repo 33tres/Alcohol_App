@@ -150,7 +150,11 @@ struct ProfileView: View {
                                         Text("Specialty")
                                     }
                                 }label: {
-                                    Image(systemName: "bag.fill")
+                                    Image("TestBeer")
+                                        .renderingMode(.original)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 25, height: 25)
                                     
                                 }
                                 .padding()
