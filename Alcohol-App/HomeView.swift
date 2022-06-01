@@ -27,6 +27,7 @@ struct HomeView: View {
         let customgray = Color(red: 0.89, green: 0.87, blue: 0.71)
         let customOlive = Color(red: 0.81, green: 0.80, blue: 0.08)
         let customRed = Color(red: 0.71, green: 0.30, blue: 0.18)
+        NavigationView{
         ScrollView{
             
             // Drink of the day
@@ -253,6 +254,8 @@ struct HomeView: View {
         }
             .frame(maxWidth: .infinity)
             .background(customGreen)
+            .navigationTitle("Home")
+        }
     }
 }
 
@@ -262,14 +265,15 @@ struct HomeView_Previews: PreviewProvider {
         username: "bctwohander",
         email: "bctwohander@gmail.com",
         ID: 0,
-        numDrinksArray: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        numDrinksArray: [40, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         5, 0, 3, 1, 1, 0, 0, 20, 10, 2,
+                         3, 1, 1, 2, 1, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 10, 5, 5, 0, 0,
                          0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                         0, 0, 0, 0, 0, 0, 0, 0, 0],
+                         0, 0, 0, 5, 1, 2, 1, 1, 0],
         drinkIDsArray: [],
-        friendIDsArray: [0, 1, 2]
+        friendIDsArray: [0, 1, 2],
+        badgesArray: []
         )
     static var previews: some View {
         HomeView(currentUser: tempUser)

@@ -38,15 +38,16 @@ struct SearchView_Previews: PreviewProvider {
     static let tempUser = User(
         username: "bctwohander",
         email: "bctwohander@gmail.com",
-        ID: 100000000,
-        numDrinksArray: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        ID: 0,
+        numDrinksArray: [40, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         5, 0, 3, 1, 1, 0, 0, 20, 10, 2,
+                         3, 1, 1, 2, 1, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 10, 5, 5, 0, 0,
                          0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                         0, 0, 0, 0, 0, 0, 0, 0, 0],
+                         0, 0, 0, 5, 1, 2, 1, 1, 0],
         drinkIDsArray: [],
-        friendIDsArray: [100000001, 100000002]
+        friendIDsArray: [0, 1, 2],
+        badgesArray: []
         )
     static var previews: some View {
         SearchView(currentUser: tempUser)

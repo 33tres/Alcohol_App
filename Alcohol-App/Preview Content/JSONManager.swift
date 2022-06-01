@@ -37,6 +37,7 @@ struct User: Codable {
     let numDrinksArray: [Int]
     let drinkIDsArray: [Int]
     let friendIDsArray: [Int]
+    let badgesArray: [Int]
 
     enum CodingKeys: String, CodingKey {
         case username
@@ -45,6 +46,7 @@ struct User: Codable {
         case numDrinksArray = "num_drinks_array"
         case drinkIDsArray = "drink_IDs_array"
         case friendIDsArray = "friend_IDs_array"
+        case badgesArray = "badges_Array"
     }
     
     static let allUsers: [User] = Bundle.main.decode(file: "Users.json")

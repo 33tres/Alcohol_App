@@ -10,7 +10,8 @@
 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 0, 0, 0, 5, 1, 2, 1, 1, 0],
 "drink_IDs_array": [],
-"friend_IDs_array": [0, 1, 2]
+"friend_IDs_array": [0, 1, 2],
+"badges_Array": []
 },
 {
 "username": "thunderstorm588",
@@ -23,7 +24,8 @@
 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 0, 0, 0, 0, 0, 0, 0, 0, 0],
 "drink_IDs_array": [],
-"friend_IDs_array": [0, 1, 2]
+"friend_IDs_array": [0, 1, 2],
+"badges_Array": []
 },
 {
 "username": "sam_the_man",
@@ -36,6 +38,7 @@
 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 0, 0, 0, 0, 0, 0, 0, 0, 0],
 "drink_IDs_array": [],
-"friend_IDs_array": [0, 2]
+"friend_IDs_array": [0, 2],
+"badges_Array": []
 }
 ]

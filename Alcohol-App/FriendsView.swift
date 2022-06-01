@@ -28,6 +28,7 @@ struct FriendsView: View {
     let customRed = Color(red: 0.71, green: 0.30, blue: 0.18)
 
     var body: some View {
+        NavigationView{
         ScrollView {
             VStack{
                 HStack{
@@ -231,6 +232,8 @@ struct FriendsView: View {
         }
         .frame(maxWidth: .infinity)
         .background(customGreen)
+        .navigationTitle("Friends")
+        }
     }
 }
 
@@ -240,14 +243,15 @@ struct FriendsView_Previews: PreviewProvider {
         username: "bctwohander",
         email: "bctwohander@gmail.com",
         ID: 0,
-        numDrinksArray: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        numDrinksArray: [40, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         5, 0, 3, 1, 1, 0, 0, 20, 10, 2,
+                         3, 1, 1, 2, 1, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 10, 5, 5, 0, 0,
                          0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                         0, 0, 0, 0, 0, 0, 0, 0, 0],
+                         0, 0, 0, 5, 1, 2, 1, 1, 0],
         drinkIDsArray: [],
-        friendIDsArray: [0, 1, 2]
+        friendIDsArray: [0, 1, 2],
+        badgesArray: []
         )
     static var previews: some View {
         FriendsView(currentUser: tempUser)
