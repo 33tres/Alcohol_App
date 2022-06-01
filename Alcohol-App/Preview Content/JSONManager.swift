@@ -27,6 +27,7 @@ struct Drink: Codable, Identifiable {
     
     static let allDrinks: [Drink] = Bundle.main.decode(file: "Drinks.json")
     static let sampleDrink: Drink = allDrinks[0]
+  
 }
 
 struct User: Codable {
