@@ -105,7 +105,8 @@ struct ProfileView: View {
                                         toggle.toggle_cider()
                                         alcohol_type = "Ciders"
                                     }label:{
-                                        Text("Cider")
+                                            Image("TestCider")
+                                            Text("Cider")
                                     }
                                     Button{
                                         toggle.toggle_wine()

@@ -19,26 +19,28 @@ struct Test: View {
     var body: some View {
         NavigationView{
             List{
-                ForEach(results, id: \.self){drink in
-                    NavigationLink(destination: Text(drink)){
-                        Text(drink)
-                    }
+                ForEach (drinksArray) { drinksArray in
+                Text(drinksArray.name)
                 }
             }
             .searchable(text: $searchText)
             .navigationTitle("Search for a Drink!")
         }
     }
-    
+}
 
-var results : [String] {
+/*var results : [String] {
     if searchText.isEmpty{
         return drinks
     } else{
         return drinks.filter{ $0.contains(searchText)}
     }
 }
-}
+ 
+ (drinksArray[0].name, id: \.self){drink in
+     NavigationLink(destination: Text(drink)){
+         Text(drink)*/
+
 
 struct Test_Previews: PreviewProvider {
     static var previews: some View {
